@@ -1,0 +1,16 @@
+
+.DS_Store
+SurfCaster/.DS_Store
+
+pods/
+Podfile.lock
+SurfCaster.xcodeproj/xcuserdata/Dshack.xcuserdatad/*
+SurfCaster.xcodeproj/xcuserdata/
+SurfCaster.xcworkspace/xcuserdata/*
+SurfCaster.xcodeproj/project.xcworkspace/xcuserdata/
+SurfCaster.xcodeproj/xcuserdata/Dshack.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+
+
+
+
+
