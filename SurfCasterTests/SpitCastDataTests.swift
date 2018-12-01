@@ -47,7 +47,7 @@ class SpitCastDataTests: XCTestCase, SpitCastDataDelegate {
     }
     
     
-    func foundTemp(tempPacket: WaterTempPacket) {
+    func foundTemp(tempPacket: WaterTempPacketClass) {
         tempSuccess?.fulfill()
     }
     
@@ -55,7 +55,7 @@ class SpitCastDataTests: XCTestCase, SpitCastDataDelegate {
         tempFail?.fulfill()
     }
     
-    func foundTide(tidePacket: TidePacket) {
+    func foundTide(tidePackets tidePacket: [WindPacketClass]) {
         tideSuccess?.fulfill()
     }
     
