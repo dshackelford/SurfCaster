@@ -12,6 +12,25 @@ import CoreGraphics
 
 class Drawer : NSObject{
     
+    func drawPartialCircle(toView view : UIView, forCenter point:CGPoint, andRadius radius:CGFloat, andAngle angle: Double, andColor color: UIColor) ->CAShapeLayer{
+        
+        let circlePath = UIBezierPath(arcCenter: point, radius: radius, startAngle: CGFloat(0), endAngle:CGFloat(angle), clockwise: true)
+        
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = circlePath.cgPath
+        
+        //change the fill color
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        //you can change the stroke color
+        shapeLayer.strokeColor = color.cgColor
+        //you can change the line width
+        shapeLayer.lineWidth = 4.0
+        
+        view.layer.addSublayer(shapeLayer)
+        
+        return shapeLayer
+    }
+    
     func drawCircle(toView view : UIView, forCenter point:CGPoint, andRadius radius:CGFloat, andColor color: UIColor){
         
         let circlePath = UIBezierPath(arcCenter: point, radius: radius, startAngle: CGFloat(0), endAngle:CGFloat(Double.pi * 2), clockwise: true)

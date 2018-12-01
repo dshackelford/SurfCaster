@@ -16,11 +16,13 @@ class DatumView : UIView{
     var screenSize : CGSize
     var panGesture : UIPanGestureRecognizer
     var pointerView : UIView
+    var periodCircle : CAShapeLayer?
+    var periodAngle : Double
     
     init(withVC vcInit :ViewController){
         vc = vcInit
         screenSize = UIScreen.main.bounds.size
-        
+        periodAngle = 0
         var myFrame : CGRect
         if(UserDefaults.standard.object(forKey: "DatumOriginX") != nil)
         {
@@ -46,6 +48,19 @@ class DatumView : UIView{
         drawTideLine(tideInit: 100)
         
         drawDirectionPoint(angleDeg: 10, scale: 1)
+        
+        var timer = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { (timer) in
+            
+            let period : Double = 1.0//seconds
+            let frameRate : Double = 1.0/40.0
+            let stepRad = (Double.pi*2.0)/period*frameRate
+            self.periodAngle = self.periodAngle + stepRad
+            if(self.periodAngle > 2.0*Double.pi)
+            {
+                self.periodAngle = 0
+            }
+            self.animateSwellPeriod(forAngle: self.periodAngle)
+        }
     }
     
     @objc func handlePan(recognizer:UIPanGestureRecognizer){
@@ -87,6 +102,17 @@ class DatumView : UIView{
     func drawDirectionPoint(angleDeg:Double, scale:Double){
         let aDrawer = Drawer()
         aDrawer.drawTriangle(toView: pointerView, forCenter: self.center,forRadius:self.frame.size.width/2 + 15, forLength: 10, andColor: UIColor.red, andStartAngle: 0)
+    }
+    
+    func animateSwellPeriod(forAngle angle:Double){
+        print("animating period swell")
+        if(periodCircle != nil)
+        {
+            periodCircle!.removeFromSuperlayer()
+        }
+        
+        let aDrawer = Drawer()
+        periodCircle = aDrawer.drawPartialCircle(toView: self, forCenter: CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2), andRadius: self.frame.size.width/2 - 8, andAngle: angle, andColor: UIColor.green)
     }
     
 }
