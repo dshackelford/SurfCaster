@@ -12,20 +12,19 @@ import MapKit
 class ViewController: UIViewController {
     var aMapView : MapView?
     var locationManager : LocationManager?
+    var datumView : DatumView?
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         let screenSize = UIScreen.main.bounds.size
         
         aMapView = MapView(vc: self, frame: CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height))
         self.view.addSubview(aMapView!)
-        
+        datumView = DatumView(withVC: self)
         locationManager = LocationManager(vc: self)
         // Do any additional setup after loading the view, typically from a nib.
-        
-        let aDatumController = DatumController(withVC: self)
-        aDatumController.drawTideLine(tideInit: 85)
     }
 
     @IBAction func onReportButton(){

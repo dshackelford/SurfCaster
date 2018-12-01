@@ -31,10 +31,7 @@ class LocationManager : CLLocationManager, CLLocationManagerDelegate{
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-        print("LocationManager: updating heading: " + String(newHeading.trueHeading))
-        if(vc?.aMapView?.isMoving == false){
-            vc?.aMapView?.camera.heading = newHeading.trueHeading
-        }
+//        print("LocationManager: updating heading: " + String(newHeading.trueHeading))
     }
     
     

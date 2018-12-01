@@ -11,7 +11,7 @@
 		6921DD3D219D3B2800B0DF5C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6921DD3C219D3B2800B0DF5C /* LocationManager.swift */; };
 		6921DD3F219D414600B0DF5C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6921DD3E219D414600B0DF5C /* MapView.swift */; };
 		6921DD42219D4DAE00B0DF5C /* Drawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6921DD41219D4DAE00B0DF5C /* Drawer.swift */; };
-		6921DD44219D556400B0DF5C /* DatumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6921DD43219D556400B0DF5C /* DatumController.swift */; };
+		6921DD44219D556400B0DF5C /* DatumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6921DD43219D556400B0DF5C /* DatumView.swift */; };
 		6921DD46219D557300B0DF5C /* SpitCastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6921DD45219D557300B0DF5C /* SpitCastData.swift */; };
 		6921DD49219D559500B0DF5C /* SurfData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6921DD48219D559500B0DF5C /* SurfData.swift */; };
 		697983ED219C01B7004814DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697983EC219C01B7004814DC /* AppDelegate.swift */; };
@@ -50,7 +50,7 @@
 		6921DD3C219D3B2800B0DF5C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		6921DD3E219D414600B0DF5C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		6921DD41219D4DAE00B0DF5C /* Drawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawer.swift; sourceTree = "<group>"; };
-		6921DD43219D556400B0DF5C /* DatumController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumController.swift; sourceTree = "<group>"; };
+		6921DD43219D556400B0DF5C /* DatumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumView.swift; sourceTree = "<group>"; };
 		6921DD45219D557300B0DF5C /* SpitCastData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpitCastData.swift; sourceTree = "<group>"; };
 		6921DD48219D559500B0DF5C /* SurfData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfData.swift; sourceTree = "<group>"; };
 		697983E9219C01B7004814DC /* SurfCaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurfCaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,7 +143,7 @@
 				6921DD3E219D414600B0DF5C /* MapView.swift */,
 				6921DD3C219D3B2800B0DF5C /* LocationManager.swift */,
 				69798423219C0C27004814DC /* NibView.swift */,
-				6921DD43219D556400B0DF5C /* DatumController.swift */,
+				6921DD43219D556400B0DF5C /* DatumView.swift */,
 				6921DD47219D557C00B0DF5C /* SurfData */,
 				6921DD40219D4DA300B0DF5C /* Drawing */,
 				6979841D219C08C8004814DC /* ForecastView */,
@@ -334,7 +334,7 @@
 			files = (
 				6921DD46219D557300B0DF5C /* SpitCastData.swift in Sources */,
 				6921DD3F219D414600B0DF5C /* MapView.swift in Sources */,
-				6921DD44219D556400B0DF5C /* DatumController.swift in Sources */,
+				6921DD44219D556400B0DF5C /* DatumView.swift in Sources */,
 				697983EF219C01B7004814DC /* ViewController.swift in Sources */,
 				697983ED219C01B7004814DC /* AppDelegate.swift in Sources */,
 				6921DD3D219D3B2800B0DF5C /* LocationManager.swift in Sources */,

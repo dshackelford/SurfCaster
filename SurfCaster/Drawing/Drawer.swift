@@ -45,4 +45,27 @@ class Drawer : NSObject{
         
         view.layer.addSublayer(shapeLayer)
     }
+    
+    func drawTriangle(toView view :UIView, forCenter point:CGPoint, forRadius radius: CGFloat, forLength length: CGFloat, andColor color:UIColor, andStartAngle startAngle: Double) {
+        
+        let path = UIBezierPath()
+        let center = CGPoint(x:view.frame.size.width/2, y: view.frame.size.height/2)
+        path.move(to: CGPoint(x:center.x + radius,y:center.y))
+        path.addLine(to: CGPoint(x:center.x + radius + length,y:center.y - length/2))
+        path.addLine(to: CGPoint(x:center.x + radius + length,y:center.y + length/2))
+//        path.addLine(to: CGPoint(x:center.x + 100,y:center.y))
+        path.close()
+        
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = path.cgPath
+        
+        //change the fill color
+        shapeLayer.fillColor = color.cgColor
+        //you can change the stroke color
+        shapeLayer.strokeColor = UIColor.red.cgColor
+        //you can change the line width
+        shapeLayer.lineWidth = 8.0
+        
+        view.layer.addSublayer(shapeLayer)
+    }
 }
