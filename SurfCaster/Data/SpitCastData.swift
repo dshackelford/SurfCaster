@@ -10,20 +10,15 @@ import Foundation
 import CoreLocation
 
 protocol SpitCastDataDelegate {
-    func foundTempData(data : WaterTempPacket, county:String)
-    func tempDataError(error:Error)
+    func foundTempData(data : WaterTempPacket?, county:String, error:Error?)
     
-    func foundTideData(dataArr : [TidePacket], county:String)
-    func tideDataError(error:Error)
+    func foundTideData(dataArr : [TidePacket]?, county:String, error:Error?)
     
-    func foundSwellData(dataArr : [SwellPacket], county:String)
-    func swellDataError(error:Error)
+    func foundSwellData(dataArr : [SwellPacket]?, county:String, error:Error?)
     
-    func foundWindData(dataArr : [WindPacket], county:String)
-    func windDataError(error:Error)
+    func foundWindData(dataArr : [WindPacket]?, county:String, error:Error?)
     
-    func foundAllSpots(dataArr : [SpotPacket])
-    func allSpotsError(error:Error)
+    func foundAllSpots(dataArr : [SpotPacket]?, error:Error?)
 }
 
 
@@ -46,11 +41,11 @@ class SpitCastData{
             do{
                 let results = try JSONDecoder().decode(WaterTempPacket.self, from:data!)
                 print(results)
-                self.delegate.foundTempData(data: results, county: county)
+                self.delegate.foundTempData(data: results, county: county, error: nil)
             }
             catch let error{
                 print(error)
-                self.delegate.tempDataError(error: error)
+                self.delegate.foundTempData(data: nil, county: county, error: error)
             }
         }
         
@@ -68,11 +63,11 @@ class SpitCastData{
             do {
                 let results = try JSONDecoder().decode([TidePacket].self, from:data!)
                 print(results)
-                self.delegate.foundTideData(dataArr: results, county: county)
+                self.delegate.foundTideData(dataArr: results, county: county, error: nil)
             }
             catch let error{
                 print(error)
-                self.delegate.tideDataError(error: error)
+                self.delegate.foundTideData(dataArr: nil, county: county, error: error)
             }
         }
         
@@ -90,11 +85,11 @@ class SpitCastData{
             do {
                 let packet = try JSONDecoder().decode([SwellPacket].self, from: data!)
                 print(packet)
-                self.delegate.foundSwellData(dataArr: packet, county: county)
+                self.delegate.foundSwellData(dataArr: packet, county: county, error: nil)
             }
             catch let error{
                 print(error)
-                self.delegate.swellDataError(error: error)
+                self.delegate.foundSwellData(dataArr: nil, county: county, error: error)
             }
         }
         dataTask.resume()
@@ -117,11 +112,11 @@ class SpitCastData{
                     }
                     let results = try JSONDecoder().decode([WindPacket].self, from:data!)
                     print(results)
-                    self.delegate.foundWindData(dataArr: results, county: county)
+                    self.delegate.foundWindData(dataArr: results, county: county, error: nil)
                 }
                 catch let error{
                     print(error)
-                    self.delegate.windDataError(error: error)
+                    self.delegate.foundWindData(dataArr: nil, county: county, error: error)
                 }
             }
             
@@ -139,11 +134,11 @@ class SpitCastData{
             do {
                 let results = try JSONDecoder().decode([SpotPacket].self, from:data!)
                 print(results)
-                self.delegate.foundAllSpots(dataArr: results)
+                self.delegate.foundAllSpots(dataArr: results, error: nil)
             }
             catch let error{
                 print(error)
-                self.delegate.allSpotsError(error: error)
+                self.delegate.foundAllSpots(dataArr: nil, error: error)
             }
         }
         

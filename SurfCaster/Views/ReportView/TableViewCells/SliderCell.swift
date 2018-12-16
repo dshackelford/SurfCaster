@@ -13,6 +13,8 @@ import SwiftRangeSlider
 class SliderCell : UITableViewCell{
     
     @IBOutlet weak var rangeSlider : RangeSlider!
+    @IBOutlet weak var startTimeLabel : UILabel?
+    @IBOutlet weak var endTimeLabel : UILabel?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

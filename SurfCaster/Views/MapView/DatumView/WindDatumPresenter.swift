@@ -69,53 +69,36 @@ class WindDatumPresenter : UIView, DatumViewPresenter, SpitCastDataDelegate{
     }
     
     //MARK: SpitCastDelegateMethods
-    func foundTempData(data: WaterTempPacket, county: String) {
+    func foundTempData(data: WaterTempPacket?, county: String, error: Error?) {
         
     }
     
-    func tempDataError(error: Error) {
+    func foundTideData(dataArr: [TidePacket]?, county: String, error: Error?) {
         
     }
     
-    func foundTideData(dataArr: [TidePacket], county: String) {
+    func foundSwellData(dataArr: [SwellPacket]?, county: String, error: Error?) {
         
     }
     
-    func tideDataError(error: Error) {
-        
-    }
-    
-    func foundSwellData(dataArr: [SwellPacket], county: String) {
-        
-    }
-    
-    func swellDataError(error: Error) {
-        
-    }
-    
-    func foundWindData(dataArr: [WindPacket], county: String) {
-        for packet in dataArr
+    func foundWindData(dataArr: [WindPacket]?, county: String, error: Error?) {
+        if(dataArr != nil)
         {
-            print("Wind direction: " + packet.directionCompass + " and degrees: " + String(packet.directionDegrees) + " at hour: " + packet.hour)
+            for packet in dataArr!
+            {
+                print("Wind direction: " + packet.directionCompass + " and degrees: " + String(packet.directionDegrees) + " at hour: " + packet.hour)
+            }
+            
+            forecast = dataArr!
+            
+            DispatchQueue.main.async {
+                self.infoLabel.text = dataArr![0].directionCompass
+                self.angleOffset = dataArr![0].directionDegrees + 180
+            }
         }
-        
-        forecast = dataArr
-        
-        DispatchQueue.main.async {
-            self.infoLabel.text = dataArr[0].directionCompass
-            self.angleOffset = dataArr[0].directionDegrees + 180
-        }
     }
     
-    func windDataError(error: Error) {
-        
-    }
-    
-    func foundAllSpots(dataArr: [SpotPacket]) {
-        
-    }
-    
-    func allSpotsError(error: Error) {
+    func foundAllSpots(dataArr: [SpotPacket]?, error: Error?) {
         
     }
 }

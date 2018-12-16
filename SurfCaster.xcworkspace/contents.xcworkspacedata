@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/LocationsDB.swift">
+   </FileRef>
+   <FileRef
       location = "group:SurfCaster.xcodeproj">
    </FileRef>
    <FileRef

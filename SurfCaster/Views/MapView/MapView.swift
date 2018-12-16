@@ -33,8 +33,7 @@ class MapView : MKMapView, MKMapViewDelegate, UIGestureRecognizerDelegate{
         
         self.delegate = self
         
-        let dataManager = DataManager()
-        let spotArr = dataManager.getAllSpots()
+        let spotArr = LocationsDB().getAllSpots() //may not return values
         for aSpot in spotArr
         {
             let anno = MKPointAnnotation()

@@ -11,7 +11,7 @@ import UIKit
 
 class TextInputCell : UITableViewCell{
     
-    @IBOutlet var textInput : UITextField?
+    @IBOutlet var textInput : UITextView?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

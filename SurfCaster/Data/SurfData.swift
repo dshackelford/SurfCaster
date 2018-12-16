@@ -9,36 +9,6 @@
 import Foundation
 import CoreLocation
 
-
-
-//protocol SurfData {
-//    func getSwellData(forLoc loc:CLLocation)
-//    func getTideData(forLoc loc: CLLocation)
-//}
-//
-//protocol SurfDataReceiver {
-//    func swellDataReceived(data : SwellData)
-//    func tideDataReceived(data : TideData)
-//}
-//
-//protocol SwellData { //no setters required, i.e. readonly
-//    var magnitude : Double {get}
-//    var direction : Double {get} //degrees
-//    var location : CLLocation {get}
-//}
-//
-//protocol TideData {
-//    var magnitude : Double {get}
-//    var location : CLLocation {get}
-//}
-//
-//protocol WindData {
-//    var magnitude : Double {get}
-//    var direction : Double {get} //degrees
-//    var location : CLLocation {get}
-//}
-
-
 public class TidePacket : Decodable{
     var dateStr : String
     var day : String

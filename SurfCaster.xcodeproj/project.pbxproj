@@ -30,6 +30,13 @@
 		696D5B7621BCB2DB00959CCC /* TextInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696D5B7521BCB2DB00959CCC /* TextInputCell.xib */; };
 		696D5B7821BDC65900959CCC /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696D5B7721BDC65900959CCC /* SliderCell.xib */; };
 		696D5B7A21BDC66200959CCC /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696D5B7921BDC66200959CCC /* SliderCell.swift */; };
+		696D5B7C21C5FD4800959CCC /* RatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696D5B7B21C5FD4800959CCC /* RatingCell.swift */; };
+		696D5B7E21C5FD5000959CCC /* RatingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696D5B7D21C5FD5000959CCC /* RatingCell.xib */; };
+		696D5B8221C5FEDA00959CCC /* Star.pxm in Resources */ = {isa = PBXBuildFile; fileRef = 696D5B8121C5FEDA00959CCC /* Star.pxm */; };
+		696D5B8521C5FEE600959CCC /* StarUnhighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 696D5B8321C5FEE600959CCC /* StarUnhighlighted.png */; };
+		696D5B8621C5FEE600959CCC /* StarHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 696D5B8421C5FEE600959CCC /* StarHighlighted.png */; };
+		696D5B8A21C6E4C200959CCC /* LocationsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696D5B8921C6E4C200959CCC /* LocationsDB.swift */; };
+		696D5B8B21C6E4C200959CCC /* LocationsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696D5B8921C6E4C200959CCC /* LocationsDB.swift */; };
 		697983ED219C01B7004814DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697983EC219C01B7004814DC /* AppDelegate.swift */; };
 		697983EF219C01B7004814DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697983EE219C01B7004814DC /* ViewController.swift */; };
 		697983F2219C01B7004814DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 697983F0219C01B7004814DC /* Main.storyboard */; };
@@ -86,6 +93,12 @@
 		696D5B7521BCB2DB00959CCC /* TextInputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextInputCell.xib; sourceTree = "<group>"; };
 		696D5B7721BDC65900959CCC /* SliderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCell.xib; sourceTree = "<group>"; };
 		696D5B7921BDC66200959CCC /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
+		696D5B7B21C5FD4800959CCC /* RatingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCell.swift; sourceTree = "<group>"; };
+		696D5B7D21C5FD5000959CCC /* RatingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingCell.xib; sourceTree = "<group>"; };
+		696D5B8121C5FEDA00959CCC /* Star.pxm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Star.pxm; sourceTree = "<group>"; };
+		696D5B8321C5FEE600959CCC /* StarUnhighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StarUnhighlighted.png; sourceTree = "<group>"; };
+		696D5B8421C5FEE600959CCC /* StarHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StarHighlighted.png; sourceTree = "<group>"; };
+		696D5B8921C6E4C200959CCC /* LocationsDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationsDB.swift; path = /Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/LocationsDB.swift; sourceTree = "<absolute>"; };
 		697983E9219C01B7004814DC /* SurfCaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurfCaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		697983EC219C01B7004814DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		697983EE219C01B7004814DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +174,7 @@
 		6921DD47219D557C00B0DF5C /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				696D5B8921C6E4C200959CCC /* LocationsDB.swift */,
 				695155C721B352A7008781F6 /* DataManager.swift */,
 				6921DD48219D559500B0DF5C /* SurfData.swift */,
 				6921DD45219D557300B0DF5C /* SpitCastData.swift */,
@@ -171,9 +185,8 @@
 		696D5B6921BCA5D800959CCC /* Media */ = {
 			isa = PBXGroup;
 			children = (
-				696D5B6C21BCA60B00959CCC /* compassBlue.png */,
-				696D5B6B21BCA60B00959CCC /* compassRed.png */,
-				696D5B6A21BCA60B00959CCC /* newspaper.png */,
+				696D5B8021C5FE2D00959CCC /* pixelmators */,
+				696D5B7F21C5FE2400959CCC /* pngs */,
 			);
 			path = Media;
 			sourceTree = "<group>";
@@ -206,6 +219,26 @@
 				6979841E219C08D9004814DC /* TableViewCells */,
 			);
 			path = ReportView;
+			sourceTree = "<group>";
+		};
+		696D5B7F21C5FE2400959CCC /* pngs */ = {
+			isa = PBXGroup;
+			children = (
+				696D5B8421C5FEE600959CCC /* StarHighlighted.png */,
+				696D5B8321C5FEE600959CCC /* StarUnhighlighted.png */,
+				696D5B6C21BCA60B00959CCC /* compassBlue.png */,
+				696D5B6B21BCA60B00959CCC /* compassRed.png */,
+				696D5B6A21BCA60B00959CCC /* newspaper.png */,
+			);
+			path = pngs;
+			sourceTree = "<group>";
+		};
+		696D5B8021C5FE2D00959CCC /* pixelmators */ = {
+			isa = PBXGroup;
+			children = (
+				696D5B8121C5FEDA00959CCC /* Star.pxm */,
+			);
+			path = pixelmators;
 			sourceTree = "<group>";
 		};
 		697983E0219C01B7004814DC = {
@@ -275,6 +308,8 @@
 				696D5B7521BCB2DB00959CCC /* TextInputCell.xib */,
 				696D5B7921BDC66200959CCC /* SliderCell.swift */,
 				696D5B7721BDC65900959CCC /* SliderCell.xib */,
+				696D5B7B21C5FD4800959CCC /* RatingCell.swift */,
+				696D5B7D21C5FD5000959CCC /* RatingCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -412,11 +447,15 @@
 			files = (
 				696D5B7821BDC65900959CCC /* SliderCell.xib in Resources */,
 				696D5B6D21BCA60B00959CCC /* newspaper.png in Resources */,
+				696D5B8621C5FEE600959CCC /* StarHighlighted.png in Resources */,
 				697983F7219C01B8004814DC /* LaunchScreen.storyboard in Resources */,
 				696D5B7621BCB2DB00959CCC /* TextInputCell.xib in Resources */,
 				696D5B6F21BCA60B00959CCC /* compassBlue.png in Resources */,
 				697983F4219C01B8004814DC /* Assets.xcassets in Resources */,
+				696D5B8521C5FEE600959CCC /* StarUnhighlighted.png in Resources */,
+				696D5B7E21C5FD5000959CCC /* RatingCell.xib in Resources */,
 				697983F2219C01B7004814DC /* Main.storyboard in Resources */,
+				696D5B8221C5FEDA00959CCC /* Star.pxm in Resources */,
 				696D5B6E21BCA60B00959CCC /* compassRed.png in Resources */,
 				69798422219C0913004814DC /* SurfDataCell.xib in Resources */,
 			);
@@ -526,6 +565,8 @@
 				696D5B7421BCB29C00959CCC /* TextInputCell.swift in Sources */,
 				696D5B7A21BDC66200959CCC /* SliderCell.swift in Sources */,
 				6921DD3F219D414600B0DF5C /* MapView.swift in Sources */,
+				696D5B8A21C6E4C200959CCC /* LocationsDB.swift in Sources */,
+				696D5B7C21C5FD4800959CCC /* RatingCell.swift in Sources */,
 				6921DD44219D556400B0DF5C /* DatumViewContainer.swift in Sources */,
 				691714E121B31950005C0ABE /* TideDatumPresenter.swift in Sources */,
 				695155CB21B4F660008781F6 /* Utilities.swift in Sources */,
@@ -550,6 +591,7 @@
 				69E4A62A21A9D369009A9D63 /* SpitCastDataTests.swift in Sources */,
 				69798402219C01B9004814DC /* SurfCasterTests.swift in Sources */,
 				691D0C7821ABD0F2003E638E /* SurfData.swift in Sources */,
+				696D5B8B21C6E4C200959CCC /* LocationsDB.swift in Sources */,
 				695155CE21B509A7008781F6 /* DataManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -721,7 +763,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5C7WP8NCS7;
 				INFOPLIST_FILE = SurfCaster/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = dshacktech.SurfCaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -737,7 +782,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5C7WP8NCS7;
 				INFOPLIST_FILE = SurfCaster/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = dshacktech.SurfCaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -754,7 +802,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5C7WP8NCS7;
 				INFOPLIST_FILE = SurfCasterTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = dshacktech.SurfCasterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -772,7 +824,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5C7WP8NCS7;
 				INFOPLIST_FILE = SurfCasterTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = dshacktech.SurfCasterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -789,7 +845,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5C7WP8NCS7;
 				INFOPLIST_FILE = SurfCasterUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = dshacktech.SurfCasterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -806,7 +866,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5C7WP8NCS7;
 				INFOPLIST_FILE = SurfCasterUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = dshacktech.SurfCasterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
