@@ -12,12 +12,9 @@ import MapKit
 
 class LocationManager : CLLocationManager, CLLocationManagerDelegate{
     
-    var vc : ViewController?
-    
-    init(vc:ViewController) {
+    override init() {
         super.init()
         self.delegate = self
-        self.vc = vc
         enableAuthorization()
         startUpdatingHeading()
 //        startUpdatingLocation()

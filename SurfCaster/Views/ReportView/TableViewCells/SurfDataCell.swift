@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SurfDataCell : NibView{
+class SurfDataCell : UITableViewCell{
     
     @IBOutlet var mainLabel : UILabel?
     @IBOutlet var dataLabel : UILabel?

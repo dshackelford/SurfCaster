@@ -9,6 +9,46 @@
 import XCTest
 
 class SpitCastDataTests: XCTestCase, SpitCastDataDelegate {
+    func foundTempData(data: WaterTempPacket, county: String) {
+        
+    }
+    
+    func tempDataError(error: Error) {
+        
+    }
+    
+    func foundTideData(dataArr: [TidePacket], county: String) {
+        
+    }
+    
+    func tideDataError(error: Error) {
+        
+    }
+    
+    func foundSwellData(dataArr: [SwellPacket], county: String) {
+        
+    }
+    
+    func swellDataError(error: Error) {
+        
+    }
+    
+    func foundWindData(dataArr: [WindPacket], county: String) {
+        
+    }
+    
+    func windDataError(error: Error) {
+        
+    }
+    
+    func foundAllSpots(dataArr: [SpotPacket]) {
+        
+    }
+    
+    func allSpotsError(error: Error) {
+        
+    }
+    
 
     var tideSuccess : XCTestExpectation?
     var tideFail : XCTestExpectation?
@@ -18,7 +58,7 @@ class SpitCastDataTests: XCTestCase, SpitCastDataDelegate {
     func testTideData(){
         tideSuccess = XCTestExpectation(description: "Tide Data")
         let spitData = SpitCastData(delegateInit: self)
-        spitData.getSomeTideData()
+        spitData.getTideData(forCounty: "Orange-County")
         wait(for: [tideSuccess!], timeout: 60)
     }
     
@@ -26,7 +66,7 @@ class SpitCastDataTests: XCTestCase, SpitCastDataDelegate {
         tempSuccess = XCTestExpectation()
         
         let spitData = SpitCastData(delegateInit: self)
-        spitData.getSomeTempData()
+        spitData.getTempData(forCounty: "Orange-County")
         wait(for: [tempSuccess!], timeout: 60)
     }
     
@@ -34,7 +74,7 @@ class SpitCastDataTests: XCTestCase, SpitCastDataDelegate {
         tempSuccess = XCTestExpectation()
         
         let spitData = SpitCastData(delegateInit: self)
-        spitData.getSomeSwellData()
+        spitData.getSwellData(forCounty: "Orange-County")
         wait(for: [tempSuccess!], timeout: 60)
     }
     
@@ -42,22 +82,18 @@ class SpitCastDataTests: XCTestCase, SpitCastDataDelegate {
         tempSuccess = XCTestExpectation()
         
         let spitData = SpitCastData(delegateInit: self)
-        spitData.getSomeWindData()
+        spitData.getWindData(forCounty: "Orange-County")
+        wait(for: [tempSuccess!], timeout: 60)
+    }
+    
+    func testAllSpots(){
+        tempSuccess = XCTestExpectation()
+        let spitData = SpitCastData(delegateInit: self)
+        spitData.getAllSpots()
         wait(for: [tempSuccess!], timeout: 60)
     }
     
     
-    func foundTemp(tempPacket: WaterTempPacketClass) {
-        tempSuccess?.fulfill()
-    }
-    
-    func tempDataError() {
-        tempFail?.fulfill()
-    }
-    
-    func foundTide(tidePackets tidePacket: [WindPacketClass]) {
-        tideSuccess?.fulfill()
-    }
     
 
 }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SliderCellReuseIdentifier" id="A7R-Rh-DgI" customClass="SliderCell" customModule="SurfCaster" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A7R-Rh-DgI" id="gXS-nb-ul2">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lR-dm-vJz" customClass="RangeSlider" customModule="SwiftRangeSlider">
+                        <rect key="frame" x="5" y="0.0" width="365" height="43.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="5lR-dm-vJz" secondAttribute="bottom" id="2ww-gZ-yew"/>
+                    <constraint firstAttribute="trailing" secondItem="5lR-dm-vJz" secondAttribute="trailing" constant="5" id="6YK-UF-N07"/>
+                    <constraint firstItem="5lR-dm-vJz" firstAttribute="top" secondItem="gXS-nb-ul2" secondAttribute="top" id="AVP-Fl-V7B"/>
+                    <constraint firstItem="5lR-dm-vJz" firstAttribute="leading" secondItem="gXS-nb-ul2" secondAttribute="leading" constant="5" id="ezC-JH-CPc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="rangeSlider" destination="5lR-dm-vJz" id="qis-Yj-Sfq"/>
+            </connections>
+            <point key="canvasLocation" x="184.80000000000001" y="91.754122938530742"/>
+        </tableViewCell>
+    </objects>
+</document>

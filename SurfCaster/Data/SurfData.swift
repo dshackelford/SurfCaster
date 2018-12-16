@@ -198,3 +198,37 @@ public class SubSwellPacket : Decodable{
     }
 }
 
+public class SpotPacket : Decodable{
+    var county : String
+    var lat : Double
+    var lon : Double
+    var spotID : Int
+    var spotName : String
+    
+    
+    enum CodingKeys : String, CodingKey{
+        case county = "county_name"
+        case lat = "latitude"
+        case lon = "longitude"
+        case spotID = "spot_id"
+        case spotName = "spot_name"
+    }
+    
+    required public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.county = try container.decode(String.self, forKey: .county)
+        self.lat = try container.decode(Double.self, forKey: .lat)
+        self.lon = try container.decode(Double.self, forKey: .lon)
+        self.spotID = try container.decode(Int.self, forKey: .spotID)
+        self.spotName = try container.decode(String.self, forKey: .spotName)
+    }
+    
+    init(latInit:Double, lonInit:Double, spotIDInit:Int, spotNameInit:String, countyName:String){
+        
+        lat = latInit
+        lon = lonInit
+        spotID = spotIDInit
+        spotName = spotNameInit
+        county = countyName
+    }
+}
