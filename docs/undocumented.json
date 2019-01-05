@@ -1,0 +1,47 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 12,
+      "symbol": "TidePacket",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 44,
+      "symbol": "WindPacket",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 87,
+      "symbol": "WaterTempPacket",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 115,
+      "symbol": "SwellPacket",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 158,
+      "symbol": "SubSwellPacket",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 177,
+      "symbol": "SpotPacket",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/Dshack/Desktop/SurfCaster"
+}

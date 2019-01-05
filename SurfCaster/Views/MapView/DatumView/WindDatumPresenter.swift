@@ -9,16 +9,19 @@
 import Foundation
 import UIKit
 import CoreLocation
-class WindDatumPresenter : UIView, DatumViewPresenter, SpitCastDataDelegate{
+class WindDatumPresenter : UIView, DatumViewPresenter, DataManagerReceiver{
 
     var infoLabel : UILabel
     var angleOffset : Double
-    var forecast : [WindPacket]
+    var dataManager : DataManager
+    var container : DatumViewContainer
 
-    override init(frame: CGRect) {
+    init(frame: CGRect, andContainer containerInit:DatumViewContainer) {
         infoLabel = UILabel(frame: frame)
         angleOffset = 0.0
-        forecast = Array<WindPacket>()
+        dataManager = DataManager()
+        container = containerInit
+        
         super.init(frame:frame)
         drawDirectionPoint(angleDeg: 0, scale: 1)
         self.addSubview(infoLabel)
@@ -39,18 +42,14 @@ class WindDatumPresenter : UIView, DatumViewPresenter, SpitCastDataDelegate{
     }
 
     func updateAccordingToLocation(loc: CLLocation) {
-        let dataManager = DataManager()
-        dataManager.getWindForecast(forLocation: loc, andDate: Date.init(timeIntervalSinceNow: 0) as NSDate, andReceiver: self)
-//        dataManager.getWind
-        //ask data manager for new data?
+        let dataRequest = DataRequest(withDate: Date.init(timeIntervalSinceNow: 0), andLocation: loc, forReceiver: self)
+        dataManager.getWindForecast(withReqest: dataRequest)
     }
 
     func updateAccodringToTime(hour : Int) {
-        if(hour < forecast.count)
-        {
-            angleOffset = forecast[hour].directionDegrees + 180
-            rotateAccordingToAngle(angle: 0)
-        }
+        
+        let futureRequest = DataRequest(withDate: Date.init(timeIntervalSinceNow: Double(hour)*60.0*60.0), andLocation: container.location, forReceiver: self)
+        dataManager.getWindForecast(withReqest: futureRequest)
     }
     
     func hide() {
@@ -68,37 +67,40 @@ class WindDatumPresenter : UIView, DatumViewPresenter, SpitCastDataDelegate{
         aDrawer.drawTriangle(toView: self, forCenter: self.center,forRadius:self.frame.size.width/2 + 15, forLength: 10, andColor: UIColor.red)
     }
     
-    //MARK: SpitCastDelegateMethods
-    func foundTempData(data: WaterTempPacket?, county: String, error: Error?) {
-        
-    }
-    
-    func foundTideData(dataArr: [TidePacket]?, county: String, error: Error?) {
-        
-    }
-    
-    func foundSwellData(dataArr: [SwellPacket]?, county: String, error: Error?) {
-        
-    }
-    
-    func foundWindData(dataArr: [WindPacket]?, county: String, error: Error?) {
-        if(dataArr != nil)
+
+    //MARK: DataManagerReceiver Delegate Methods
+    func windForecastReceived(withData arr: [WindPacket]?, fromRequest request: DataRequest, andError error: Error?) {
+        if(arr != nil && error == nil)
         {
-            for packet in dataArr!
+            for packet in arr!
             {
-                print("Wind direction: " + packet.directionCompass + " and degrees: " + String(packet.directionDegrees) + " at hour: " + packet.hour)
+                if(packet.directionCompass != nil && packet.directionDegrees != nil && packet.hour != nil)
+                {
+                   print("Wind direction: " + packet.directionCompass! + " and degrees: " + String(packet.directionDegrees!) + " at hour: " + packet.hour!)
+                }
             }
             
-            forecast = dataArr!
-            
             DispatchQueue.main.async {
-                self.infoLabel.text = dataArr![0].directionCompass
-                self.angleOffset = dataArr![0].directionDegrees + 180
+                self.infoLabel.text = arr![0].directionCompass
+                self.angleOffset = arr![0].directionDegrees! + 180
             }
         }
     }
     
-    func foundAllSpots(dataArr: [SpotPacket]?, error: Error?) {
+    func swellForecastReceived(withData arr: [WindPacket]?, fromRequest request: DataRequest, andError error: Error?) {
         
     }
+    
+    func tideForecastReceived(withData arr: [WindPacket]?, fromRequest request: DataRequest, andError error: Error?) {
+        
+    }
+    
+    func tempForecastReceived(withData arr: [WindPacket]?, fromRequest request: DataRequest, andError error: Error?) {
+        
+    }
+    
+    func wait(fromRequest request: DataRequest) {
+        
+    }
+    
 }

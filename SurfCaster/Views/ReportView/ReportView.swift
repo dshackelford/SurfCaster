@@ -82,7 +82,6 @@ class ReportView : UITableView, UITableViewDelegate,UITableViewDataSource {
         default:
             return "Report"
         }
-        return "Report"
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -105,8 +104,6 @@ class ReportView : UITableView, UITableViewDelegate,UITableViewDataSource {
         default:
             return 30
         }
-        
-        return 30
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

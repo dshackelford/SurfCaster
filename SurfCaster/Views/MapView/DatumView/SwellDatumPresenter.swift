@@ -16,10 +16,15 @@ class SwellDatumPresenter : UIView, DatumViewPresenter{
     var periodCircle : CAShapeLayer?
     var periodAngle : Double
     var periodView : UIView
-    override init(frame: CGRect) {
+    var container : DatumViewContainer
+    
+    init(frame: CGRect, andContainer containerInit:DatumViewContainer) {
         periodAngle = 0
         periodView = UIView(frame: frame)
         infoLabel = UILabel(frame: frame)
+        
+        container = containerInit
+        
         super.init(frame:frame)
         self.addSubview(periodView)
         

@@ -21,11 +21,15 @@ protocol DatumViewPresenter {
 
 class DatumViewContainer : UIView{
     
+    
     var mapView : MapView?
     var screenSize : CGSize
     var periodCircle : CAShapeLayer?
     var periodAngle : Double
     var dataManager : DataManager?
+    
+    var location : CLLocation
+    var time : Date
     
     var currentDatumIndex : Int
     var presenters : [DatumViewPresenter]
@@ -39,6 +43,9 @@ class DatumViewContainer : UIView{
         screenSize = UIScreen.main.bounds.size
         periodAngle = 0
         currentDatumIndex = 0
+        location = CLLocation(latitude: 0,longitude: 0)
+        time = Date(timeIntervalSinceNow: 0)
+        
         var myFrame : CGRect
         if(UserDefaults.standard.object(forKey: "DatumOriginX") != nil)
         {
@@ -51,17 +58,20 @@ class DatumViewContainer : UIView{
             myFrame = CGRect(x: screenSize.width/4.0, y: screenSize.height/2.0 - screenSize.width/4.0, width: screenSize.width/2.0, height:screenSize.width/2.0)
         }
 
-        let presenterFrame = CGRect(x: 0, y: 0, width: myFrame.width, height: myFrame.height)
-        let windDatumPresenter = WindDatumPresenter.init(frame: presenterFrame)
-        let swellDatumPresenter = SwellDatumPresenter.init(frame: presenterFrame)
-        let tideDatumPresenter = TideDatumPresenter.init(frame: presenterFrame)
         presenters = Array<DatumViewPresenter>()
+        super.init(frame: myFrame)
+        
+        let presenterFrame = CGRect(x: 0, y: 0, width: myFrame.width, height: myFrame.height)
+        let windDatumPresenter = WindDatumPresenter.init(frame: presenterFrame, andContainer: self)
+        let swellDatumPresenter = SwellDatumPresenter.init(frame: presenterFrame, andContainer: self)
+        let tideDatumPresenter = TideDatumPresenter.init(frame: presenterFrame, andContainer: self)
+
         presenters.append(windDatumPresenter)
         presenters.append(swellDatumPresenter)
         presenters.append(tideDatumPresenter)
         
     
-        super.init(frame: myFrame)
+        
         dataManager = DataManager()
         
         mapView!.addSubview(self)
@@ -93,7 +103,6 @@ class DatumViewContainer : UIView{
             currentDatumIndex = 0
         }
     }
-    
     
     
     //MARK: - Gesture Recognizers
@@ -156,7 +165,25 @@ class DatumViewContainer : UIView{
         }
     }
     
-    //MARK: DataReceiver
-    
+//    //MARK: DataManagerReceiverDelegateMethods
+//    func windForecastReceived(withData arr: [WindPacket]?, fromRequest request: DataRequest, andError error: Error?) {
+//        
+//    }
+//    
+//    func swellForecastReceived(withData arr: [WindPacket]?, fromRequest request: DataRequest, andError error: Error?) {
+//        
+//    }
+//    
+//    func tideForecastReceived(withData arr: [WindPacket]?, fromRequest request: DataRequest, andError error: Error?) {
+//        
+//    }
+//    
+//    func tempForecastReceived(withData arr: [WindPacket]?, fromRequest request: DataRequest, andError error: Error?) {
+//        
+//    }
+//    
+//    func wait(fromRequest request: DataRequest) {
+//        
+//    }
     
 }

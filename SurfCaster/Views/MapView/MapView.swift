@@ -36,11 +36,14 @@ class MapView : MKMapView, MKMapViewDelegate, UIGestureRecognizerDelegate{
         let spotArr = LocationsDB().getAllSpots() //may not return values
         for aSpot in spotArr
         {
-            let anno = MKPointAnnotation()
-            anno.coordinate = CLLocationCoordinate2DMake(aSpot.lat, aSpot.lon)
-            anno.title = aSpot.spotName
-            anno.subtitle = aSpot.county
-            self.addAnnotation(anno)
+            if(aSpot.lat != nil && aSpot.lon != nil)
+            {
+                let anno = MKPointAnnotation()
+                anno.coordinate = CLLocationCoordinate2DMake(aSpot.lat!, aSpot.lon!)
+                anno.title = aSpot.spotName
+                anno.subtitle = aSpot.county
+                self.addAnnotation(anno)
+            }
         }
         
         self.vc = vc

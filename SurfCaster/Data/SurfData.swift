@@ -8,15 +8,16 @@
 
 import Foundation
 import CoreLocation
+import FMDB
 
 public class TidePacket : Decodable{
-    var dateStr : String
-    var day : String
-    var dateNum : String
-    var time : String
-    var name : String
-    var tideFt : Double
-    var tideM : Double
+    var dateStr : String?
+    var day : String?
+    var dateNum : String?
+    var time : String?
+    var name : String?
+    var tideFt : Double?
+    var tideM : Double?
     
     private enum CodingKeys: String, CodingKey {
         case dateStr = "date"
@@ -42,15 +43,15 @@ public class TidePacket : Decodable{
 
 
 public class WindPacket : Decodable {
-    var dateStr : String
-    var day : String
-    var directionDegrees : Double
-    var directionCompass : String
-    var gmt : String
-    var hour : String
-    var name : String
-    var speedKTS : Double
-    var speedMPH : Double
+    var dateStr : String?
+    var day : String?
+    var directionDegrees : Double?
+    var directionCompass : String?
+    var gmt : String?
+    var hour : String?
+    var name : String?
+    var speedKTS : Double?
+    var speedMPH : Double?
     
     enum CodingKeys : String, CodingKey{
         case dateStr = "date"
@@ -66,25 +67,43 @@ public class WindPacket : Decodable {
     
     required public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.dateStr = try container.decode(String.self, forKey: .dateStr)
-        self.day = try container.decode(String.self, forKey: .day)
-        self.directionDegrees = try container.decode(Double.self, forKey: .directionDegrees)
-        self.directionCompass = try container.decode(String.self, forKey: .directionCompass)
-        self.gmt = try container.decode(String.self, forKey: .gmt)
-        self.hour = try container.decode(String.self, forKey: .hour)
-        self.name = try container.decode(String.self, forKey: .name)
-        self.speedKTS = try container.decode(Double.self, forKey: .speedKTS)
-        self.speedMPH = try container.decode(Double.self, forKey: .speedMPH)
+        do{
+            self.dateStr = try container.decode(String.self, forKey: .dateStr)
+            self.day = try container.decode(String.self, forKey: .day)
+            self.directionDegrees = try container.decode(Double.self, forKey: .directionDegrees)
+            self.directionCompass = try container.decode(String.self, forKey: .directionCompass)
+            self.gmt = try container.decode(String.self, forKey: .gmt)
+            self.hour = try container.decode(String.self, forKey: .hour)
+            self.name = try container.decode(String.self, forKey: .name)
+            self.speedKTS = try container.decode(Double.self, forKey: .speedKTS)
+            self.speedMPH = try container.decode(Double.self, forKey: .speedMPH)
+            print("created a wind packet successfully")
+        }
+        catch{
+            print("ruh rul")
+        }
+    }
+    
+    public init(withResult result:FMResultSet){
+        self.dateStr = result.string(forColumn: "date")
+        self.day = result.string(forColumn: "day")
+        self.directionDegrees = result.double(forColumn: "WindDirectionDegrees")
+        self.directionCompass = result.string(forColumn: "WindDirectionCompass")
+//        self.gmt = convert dateStr to timeStame
+        self.hour = result.string(forColumn: "hour")
+        self.name = result.string(forColumn: "county")
+        self.speedKTS = result.double(forColumn: "WindMagnitudeKTS")
+        self.speedMPH = result.double(forColumn: "WindMagnitudeMPH")
     }
 }
 
 public class WaterTempPacket : Decodable{
-    var buoyId : Int
-    var tempC : Float
-    var county : String
-    var tempF : Float
-    var date : String
-    var wetsuit : String
+    var buoyId : Int?
+    var tempC : Float?
+    var county : String?
+    var tempF : Float?
+    var date : String?
+    var wetsuit : String?
     
     enum CodingKeys : String, CodingKey{
         case buoyId = "buoy_id"
@@ -107,16 +126,16 @@ public class WaterTempPacket : Decodable{
 }
 
 public class SwellPacket : Decodable{
-    var subSwell1 : SubSwellPacket
-    var subSwell2 : SubSwellPacket
-    var subSwell3 : SubSwellPacket
-    var subSwell4 : SubSwellPacket
-    var date : String
-    var day : String
-    var gmt : String
-    var hour : String
-    var hst : Double
-    var name : String
+    var subSwell1 : SubSwellPacket?
+    var subSwell2 : SubSwellPacket?
+    var subSwell3 : SubSwellPacket?
+    var subSwell4 : SubSwellPacket?
+    var date : String?
+    var day : String?
+    var gmt : String?
+    var hour : String?
+    var hst : Double?
+    var name : String?
     
     enum CodingKeys : String, CodingKey{
         case subSwell1 = "0"
@@ -169,11 +188,11 @@ public class SubSwellPacket : Decodable{
 }
 
 public class SpotPacket : Decodable{
-    var county : String
-    var lat : Double
-    var lon : Double
-    var spotID : Int
-    var spotName : String
+    var county : String?
+    var lat : Double?
+    var lon : Double?
+    var spotID : Int?
+    var spotName : String?
     
     
     enum CodingKeys : String, CodingKey{

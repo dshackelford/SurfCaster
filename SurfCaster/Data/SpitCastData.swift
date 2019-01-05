@@ -10,13 +10,13 @@ import Foundation
 import CoreLocation
 
 protocol SpitCastDataDelegate {
-    func foundTempData(data : WaterTempPacket?, county:String, error:Error?)
+    func foundTempData(data : WaterTempPacket?, request:DataRequest, county:String, error:Error?)
     
-    func foundTideData(dataArr : [TidePacket]?, county:String, error:Error?)
+    func foundTideData(dataArr : [TidePacket]?, request:DataRequest, county:String, error:Error?)
     
-    func foundSwellData(dataArr : [SwellPacket]?, county:String, error:Error?)
+    func foundSwellData(dataArr : [SwellPacket]?, request:DataRequest, county:String, error:Error?)
     
-    func foundWindData(dataArr : [WindPacket]?, county:String, error:Error?)
+    func foundWindData(dataArr : [WindPacket]?, request:DataRequest, county:String, error:Error?)
     
     func foundAllSpots(dataArr : [SpotPacket]?, error:Error?)
 }
@@ -25,27 +25,29 @@ protocol SpitCastDataDelegate {
 class SpitCastData{
     
     var delegate : SpitCastDataDelegate
+    var forecastDB : ForecastDB
     
     init(delegateInit : SpitCastDataDelegate) {
         delegate = delegateInit
+        forecastDB = ForecastDB()
     }
     
-    func getTempData(forCounty county:String){
+    func fetchTempData(forCounty county:String, withRequest request:DataRequest){
         
-        let url : URL = URL(string: "http://api.spitcast.com/api/county/water-temperature/" + county)!
-        let request = URLRequest(url: url, cachePolicy: NSURLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 30)
+        let url : URL = URL(string: "http://api.spitcast.com/api/county/water-temperature" + county)!
+        let urlrequest = URLRequest(url: url, cachePolicy: NSURLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 30)
         
         let session = URLSession(configuration: URLSessionConfiguration.default)
         
-        let dataTask = session.dataTask(with: request) { (data, response, error) in
+        let dataTask = session.dataTask(with: urlrequest) { (data, response, error) in
             do{
                 let results = try JSONDecoder().decode(WaterTempPacket.self, from:data!)
                 print(results)
-                self.delegate.foundTempData(data: results, county: county, error: nil)
+                self.delegate.foundTempData(data: results, request: request, county: county, error: nil)
             }
             catch let error{
                 print(error)
-                self.delegate.foundTempData(data: nil, county: county, error: error)
+                self.delegate.foundTempData(data: nil, request:request, county: county, error: error)
             }
         }
         
@@ -53,21 +55,21 @@ class SpitCastData{
     }
     
     
-    func getTideData(forCounty county:String){
-        let url : URL = URL(string: "http://api.spitcast.com/api/county/tide/" + county)!
-        let request = URLRequest(url: url, cachePolicy: NSURLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 30)
+    func fetchTideData(forCounty county:String, withRequest request:DataRequest){
+        let url : URL = URL(string: "http://api.spitcast.com/api/county/tide/" + county + "/?dcat=week")!
+        let urlrequest = URLRequest(url: url, cachePolicy: NSURLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 30)
         
         let session = URLSession(configuration: URLSessionConfiguration.default)
         
-        let dataTask = session.dataTask(with: request) { (data, response, error) in
+        let dataTask = session.dataTask(with: urlrequest) { (data, response, error) in
             do {
                 let results = try JSONDecoder().decode([TidePacket].self, from:data!)
                 print(results)
-                self.delegate.foundTideData(dataArr: results, county: county, error: nil)
+                self.delegate.foundTideData(dataArr: results, request: request, county: county, error: nil)
             }
             catch let error{
                 print(error)
-                self.delegate.foundTideData(dataArr: nil, county: county, error: error)
+                self.delegate.foundTideData(dataArr: nil, request: request, county: county, error: error)
             }
         }
         
@@ -75,36 +77,36 @@ class SpitCastData{
     }
     
     
-    func getSwellData(forCounty county:String){
-        let url : URL = URL(string: "http://api.spitcast.com/api/county/swell/" + county)!
-        let request = URLRequest(url: url, cachePolicy: NSURLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 30)
+    func fetchSwellData(forCounty county:String, withRequest request:DataRequest){
+        let url : URL = URL(string: "http://api.spitcast.com/api/county/swell/" + county + "/?dcat=week")!
+        let urlrequest = URLRequest(url: url, cachePolicy: NSURLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 30)
         
         let session = URLSession(configuration: URLSessionConfiguration.default)
         
-        let dataTask = session.dataTask(with: request) { (data, response, error) in
+        let dataTask = session.dataTask(with: urlrequest) { (data, response, error) in
             do {
                 let packet = try JSONDecoder().decode([SwellPacket].self, from: data!)
                 print(packet)
-                self.delegate.foundSwellData(dataArr: packet, county: county, error: nil)
+                self.delegate.foundSwellData(dataArr: packet,request: request, county: county, error: nil)
             }
             catch let error{
                 print(error)
-                self.delegate.foundSwellData(dataArr: nil, county: county, error: error)
+                self.delegate.foundSwellData(dataArr: nil, request:request, county: county, error: error)
             }
         }
         dataTask.resume()
     }
     
-    func getWindData(forCounty county:String){
-        let str =  "http://api.spitcast.com/api/county/wind/" + county
+    func fetchWindData(forCounty county:String, withRequest request:DataRequest){
+        let str =  "http://api.spitcast.com/api/county/wind/" + county + "/?dcat=week"
         let url : URL? = URL(string: str)
         if(url != nil)
         {
-            let request = URLRequest(url: url!, cachePolicy: NSURLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 30)
+            let urlrequest = URLRequest(url: url!, cachePolicy: NSURLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 30)
             
             let session = URLSession(configuration: URLSessionConfiguration.default)
             
-            let dataTask = session.dataTask(with: request) { (data, response, error) in
+            let dataTask = session.dataTask(with: urlrequest) { (data, response, error) in
                 do {
                     if(error != nil)
                     {
@@ -112,11 +114,11 @@ class SpitCastData{
                     }
                     let results = try JSONDecoder().decode([WindPacket].self, from:data!)
                     print(results)
-                    self.delegate.foundWindData(dataArr: results, county: county, error: nil)
+                    self.delegate.foundWindData(dataArr: results, request:request, county: county, error: nil)
                 }
                 catch let error{
                     print(error)
-                    self.delegate.foundWindData(dataArr: nil, county: county, error: error)
+                    self.delegate.foundWindData(dataArr: nil, request: request, county: county, error: error)
                 }
             }
             
@@ -124,7 +126,7 @@ class SpitCastData{
         }
     }
     
-    func getAllSpots(){
+    func fetchAllSpots(){
         let url = URL(string: "http://api.spitcast.com/api/spot/all")!
         let request = URLRequest(url: url, cachePolicy: NSURLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 30)
         

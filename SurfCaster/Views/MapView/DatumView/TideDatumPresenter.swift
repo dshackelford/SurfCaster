@@ -12,7 +12,12 @@ import CoreLocation
 
 class TideDatumPresenter: UIView , DatumViewPresenter {
     
-    override init(frame: CGRect) {
+    var container : DatumViewContainer
+    
+    init(frame: CGRect, andContainer containerInit:DatumViewContainer) {
+        
+        container = containerInit
+        
         super.init(frame:frame)
         drawTideLine(tideInit: 100)
         drawDirectionPoint(angleDeg: 90, scale: 1)

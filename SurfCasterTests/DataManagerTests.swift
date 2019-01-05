@@ -9,26 +9,56 @@
 import XCTest
 import CoreLocation
 
-class DataManagerTests: XCTestCase, DataReceiver {
-
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testGettingCountyFromLocation() {
-        let manager = DataManager(receiverInit: self)
-        let countStr = manager.getCountyNameFromLoc(loc: CLLocation(latitude: 32.750016, longitude: -117.251587))
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+class DataManagerTests: XCTestCase, DataManagerReceiver {
+    
+    var windSuccess : XCTestExpectation?
+    
+    func testGettingWind(){
+        windSuccess = XCTestExpectation(description: "Wind expectation of success")
+        
+        let manager = DataManager()
+        let loc = CLLocation(latitude: 32.7465030, longitude: -117.247067)
+        let today = Date(timeIntervalSinceNow: 0)
+        let request = DataRequest(withDate: today, andLocation: loc, forReceiver: self)
+        let windData = manager.getWindForecast(withReqest: request)
+        
+        if(windData == nil)
+        {
+            wait(for: [windSuccess!], timeout: 60)
+        }
+        else
+        {
+            windSuccess!.fulfill()
         }
     }
-
+    
+    func testGettingWindFromDB(){
+        
+    }
+    
+    func testGettingWindFail(){
+    
+    }
+    
+    
+    func windForecastReceived(withData arr: [WindPacket]?, fromRequest request: DataRequest, andError error: Error?) {
+        
+    }
+    
+    func swellForecastReceived(withData arr: [WindPacket]?, fromRequest request: DataRequest, andError error: Error?) {
+        
+    }
+    
+    func tideForecastReceived(withData arr: [WindPacket]?, fromRequest request: DataRequest, andError error: Error?) {
+        
+    }
+    
+    func tempForecastReceived(withData arr: [WindPacket]?, fromRequest request: DataRequest, andError error: Error?) {
+        
+    }
+    
+    func wait(fromRequest request: DataRequest) {
+        
+    }
+    
 }

@@ -9,7 +9,7 @@ import Foundation
 import FMDB
 import CoreLocation
 
-class LocationsDB : SpitCastDataDelegate{
+class LocationsDB {
     
     var dbPath : String
     var db : FMDatabase
@@ -26,10 +26,6 @@ class LocationsDB : SpitCastDataDelegate{
             if(db.tableExists("locations") == false){
                 do{
                     try db.executeUpdate("CREATE TABLE IF NOT EXISTS locations (spotID INT, spotName String, lat Double, lon Double, countyName String)", values: nil)
-                    
-                    let spitData = SpitCastData(delegateInit: self)
-                    db.close()
-                    spitData.getAllSpots()
                 }
                 catch
                 {
@@ -65,8 +61,7 @@ class LocationsDB : SpitCastDataDelegate{
                 
                 if(closeCounty != nil)
                 {
-                    let str = closeCounty!.replacingOccurrences(of: " ", with: "-")
-                    return str.lowercased()
+                    return convert(PrettyCountyName: closeCounty!)
                 }
                 else
                 {
@@ -79,6 +74,11 @@ class LocationsDB : SpitCastDataDelegate{
             }
         }
         return nil
+    }
+    
+    func convert(PrettyCountyName:String)->String{
+        let str = PrettyCountyName.replacingOccurrences(of: " ", with: "-")
+        return str.lowercased()
     }
     
     func getAllSpots()->[SpotPacket]{
@@ -108,41 +108,21 @@ class LocationsDB : SpitCastDataDelegate{
         return arr
     }
     
-    //MARK: SpitCastDataDelegateMethods
-    func foundAllSpots(dataArr: [SpotPacket]?, error: Error?) {
-        if(error == nil && dataArr != nil)
+    func update(withAllSpots arr:[SpotPacket]){
+        if(db.open())
         {
-            if(db.open())
+            //update the locations
+            for spot in arr
             {
-                //update the locations
-                for spot in dataArr!
+                do{
+                    try db.executeUpdate("INSERT INTO locations (spotID, spotName,lat,lon, countyName) VALUES (?,?,?,?,?)", values: [spot.spotID,spot.spotName,spot.lat,spot.lon,spot.county])
+                }
+                catch
                 {
-                    do{
-                        try db.executeUpdate("INSERT INTO locations (spotID, spotName,lat,lon, countyName) VALUES (?,?,?,?,?)", values: [spot.spotID,spot.spotName,spot.lat,spot.lon,spot.county])
-                    }
-                    catch
-                    {
-                        print(error)
-                    }
+                    print(error)
                 }
             }
         }
-    }
-    
-    func foundTempData(data: WaterTempPacket?, county: String, error: Error?) {
-        
-    }
-    
-    func foundTideData(dataArr: [TidePacket]?, county: String, error: Error?) {
-        
-    }
-    
-    func foundSwellData(dataArr: [SwellPacket]?, county: String, error: Error?) {
-        
-    }
-    
-    func foundWindData(dataArr: [WindPacket]?, county: String, error: Error?) {
-        
     }
     
 }
