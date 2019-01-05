@@ -47,7 +47,7 @@ class WindDatumPresenter : UIView, DatumViewPresenter, DataManagerReceiver{
     }
 
     func updateAccodringToTime(hour : Int) {
-        
+        print(String(hour))
         let futureRequest = DataRequest(withDate: Date.init(timeIntervalSinceNow: Double(hour)*60.0*60.0), andLocation: container.location, forReceiver: self)
         dataManager.getWindForecast(withReqest: futureRequest)
     }

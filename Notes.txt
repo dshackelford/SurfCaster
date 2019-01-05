@@ -1,0 +1,13 @@
+SurfCaster
+
+dont attempt to ExecuteUpdate forecast databases when I can know that the UNIQUE qualifier will fail
+should not use fore-unwraps (!) in the execute update queiries. May get by on the wind forecast, but will fall apart when i get to the swell packets. 
+
+grab spit cast data and parsing
+clean up coating map
+how do I move bezier paths after they are created
+do the basic math to handle the tide drawing
+how to draw multiple arrows for the swell directions
+also how to scale them according to size (use maintain same point touching circumference of circle though!)
+setting the map view center to NOT where the main datum is
+	maybe select quadrants and only animate to either of the four corners

@@ -52,6 +52,7 @@
 		69798422219C0913004814DC /* SurfDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69798421219C0913004814DC /* SurfDataCell.xib */; };
 		69E4A62821A52B29009A9D63 /* SpitCastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6921DD45219D557300B0DF5C /* SpitCastData.swift */; };
 		69E4A62A21A9D369009A9D63 /* SpitCastDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E4A62921A9D369009A9D63 /* SpitCastDataTests.swift */; };
+		69E77C5921E0964A00ABD101 /* Notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 69E77C5821E0964A00ABD101 /* Notes.txt */; };
 		B6AF124604237699237D0632 /* Pods_SurfCasterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0FE95D67912DFB694E4374 /* Pods_SurfCasterTests.framework */; };
 		F4216D84655E25B7E683D69F /* Pods_SurfCasterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ECB37342C3B309659307E57 /* Pods_SurfCasterUITests.framework */; };
 /* End PBXBuildFile section */
@@ -122,6 +123,7 @@
 		6979841F219C0909004814DC /* SurfDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfDataCell.swift; sourceTree = "<group>"; };
 		69798421219C0913004814DC /* SurfDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurfDataCell.xib; sourceTree = "<group>"; };
 		69E4A62921A9D369009A9D63 /* SpitCastDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpitCastDataTests.swift; sourceTree = "<group>"; };
+		69E77C5821E0964A00ABD101 /* Notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
 		6ECB37342C3B309659307E57 /* Pods_SurfCasterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SurfCasterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D2D9CF58D5086987F0ECDED /* Pods-SurfCaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurfCaster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SurfCaster/Pods-SurfCaster.debug.xcconfig"; sourceTree = "<group>"; };
 		9D71BEA7699B6D30E3BCE84D /* Pods-SurfCasterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurfCasterUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SurfCasterUITests/Pods-SurfCasterUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 		697983E0219C01B7004814DC = {
 			isa = PBXGroup;
 			children = (
+				69E77C5821E0964A00ABD101 /* Notes.txt */,
 				697983EB219C01B7004814DC /* SurfCaster */,
 				69798400219C01B9004814DC /* SurfCasterTests */,
 				6979840B219C01B9004814DC /* SurfCasterUITests */,
@@ -471,6 +474,7 @@
 				696D5B6D21BCA60B00959CCC /* newspaper.png in Resources */,
 				696D5B8621C5FEE600959CCC /* StarHighlighted.png in Resources */,
 				697983F7219C01B8004814DC /* LaunchScreen.storyboard in Resources */,
+				69E77C5921E0964A00ABD101 /* Notes.txt in Resources */,
 				696D5B7621BCB2DB00959CCC /* TextInputCell.xib in Resources */,
 				696D5B6F21BCA60B00959CCC /* compassBlue.png in Resources */,
 				697983F4219C01B8004814DC /* Assets.xcassets in Resources */,

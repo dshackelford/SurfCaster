@@ -25,7 +25,7 @@ class ForecastDB {
         {
             if(db.tableExists("windForecasts") == false){
                 do{
-                    try db.executeUpdate("CREATE TABLE IF NOT EXISTS windForecasts (county String, date String UNIQUE, day String, hour String, WindDirectionDegrees Double, WindDirectionCompass String, WindMagnitudeMPH Double, WindMagnitudeKTS Double)", values: nil)
+                    try db.executeUpdate("CREATE TABLE IF NOT EXISTS windForecasts (county String, date String, day String, gmtStr String UNIQUE, hour String, WindDirectionDegrees Double, WindDirectionCompass String, WindMagnitudeMPH Double, WindMagnitudeKTS Double)", values: nil)
                     try db.executeUpdate("CREATE TABLE IF NOT EXISTS tideForecasts (county String, date Date, hour Int, TideMagnitude Double)", values: nil)
 //                    try db.executeUpdate("CREATE TABLE IF NOT EXISTS swellForecasts (county String, date Date, hour Int, TideMagnitude Double)", values: nil)
                     db.close()
@@ -59,7 +59,14 @@ class ForecastDB {
             }
         }
         db.close()
-        return arr
+        if(arr.count > 0)
+        {
+            return arr
+        }
+        else
+        {
+            return nil;
+        }
     }
     
     func getSwellForecast(forDate date:Date) -> SwellPacket?{
@@ -92,7 +99,7 @@ class ForecastDB {
                 {
                     let countyName = locDB.convert(PrettyCountyName: packet.name!)
                     do{
-                        try db.executeUpdate("INSERT INTO windForecasts (county, date, hour, WindDirectionDegrees, WindDirectionCompass, WindMagnitudeMPH, WindMagnitudeKTS) VALUES (?,?,?,?,?,?,?)", values: [countyName, packet.gmt!, packet.hour!, packet.directionDegrees!, packet.directionCompass!, packet.speedMPH!, packet.speedKTS!])
+                        try db.executeUpdate("INSERT INTO windForecasts (county, date, day, hour, gmtStr, WindDirectionDegrees, WindDirectionCompass, WindMagnitudeMPH, WindMagnitudeKTS) VALUES (?,?,?,?,?,?,?,?,?)", values: [countyName, packet.dateStr!, packet.day! ,packet.hour!, packet.gmt!, packet.directionDegrees!, packet.directionCompass!, packet.speedMPH!, packet.speedKTS!])
                     }
                     catch{
                         print(error)
