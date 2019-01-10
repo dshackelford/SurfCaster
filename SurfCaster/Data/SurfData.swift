@@ -10,11 +10,12 @@ import Foundation
 import CoreLocation
 import FMDB
 
+///Data packet implementation for Tide information.
 public class TidePacket : Decodable{
     var dateStr : String?
     var day : String?
-    var dateNum : String?
-    var time : String?
+    var gmt : String?
+    var hour : String?
     var name : String?
     var tideFt : Double?
     var tideM : Double?
@@ -22,8 +23,8 @@ public class TidePacket : Decodable{
     private enum CodingKeys: String, CodingKey {
         case dateStr = "date"
         case day = "day"
-        case dateNum = "gmt"
-        case time = "hour"
+        case gmt = "gmt"
+        case hour = "hour"
         case name = "name"
         case tideFt = "tide"
         case tideM = "tide_meters"
@@ -33,15 +34,25 @@ public class TidePacket : Decodable{
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.dateStr = try container.decode(String.self, forKey: .dateStr)
         self.day = try container.decode(String.self, forKey: .day)
-        self.dateNum = try container.decode(String.self, forKey: .dateNum)
-        self.time = try container.decode(String.self, forKey: .time)
+        self.gmt = try container.decode(String.self, forKey: .gmt)
+        self.hour = try container.decode(String.self, forKey: .hour)
         self.name = try container.decode(String.self, forKey: .name)
         self.tideFt = try container.decode(Double.self, forKey: .tideFt)
         self.tideM = try container.decode(Double.self, forKey: .tideM)
     }
+    
+    public init(withResult result:FMResultSet){
+        self.dateStr = result.string(forColumn: "date")
+        self.day = result.string(forColumn: "day")
+        self.gmt = result.string(forColumn: "gmtStr")
+        self.hour = result.string(forColumn: "hour")
+        self.name = result.string(forColumn: "county")
+        self.tideM = result.double(forColumn: "TideMagnitudeMeters")
+        self.tideFt = result.double(forColumn: "TideMagnitudeFeet")
+    }
 }
 
-
+///Data packet implementation for Wind information.
 public class WindPacket : Decodable {
     var dateStr : String?
     var day : String?
@@ -89,7 +100,7 @@ public class WindPacket : Decodable {
         self.day = result.string(forColumn: "day")
         self.directionDegrees = result.double(forColumn: "WindDirectionDegrees")
         self.directionCompass = result.string(forColumn: "WindDirectionCompass")
-//        self.gmt = convert dateStr to timeStame
+        self.gmt = result.string(forColumn: "gmtStr")
         self.hour = result.string(forColumn: "hour")
         self.name = result.string(forColumn: "county")
         self.speedKTS = result.double(forColumn: "WindMagnitudeKTS")
@@ -97,6 +108,7 @@ public class WindPacket : Decodable {
     }
 }
 
+///Data packet implementation for Water Temperature information.
 public class WaterTempPacket : Decodable{
     var buoyId : Int?
     var tempC : Float?
@@ -125,6 +137,7 @@ public class WaterTempPacket : Decodable{
     }
 }
 
+///Data packet implementation for Swell information.
 public class SwellPacket : Decodable{
     var subSwell1 : SubSwellPacket?
     var subSwell2 : SubSwellPacket?
@@ -167,7 +180,7 @@ public class SwellPacket : Decodable{
     
 }
 
-
+///Data packet implementation for SubSwell information.
 public class SubSwellPacket : Decodable{
     var dir : Double?
     var hs : Double?
@@ -187,6 +200,7 @@ public class SubSwellPacket : Decodable{
     }
 }
 
+///Data packet implementation for Spot information.
 public class SpotPacket : Decodable{
     var county : String?
     var lat : Double?

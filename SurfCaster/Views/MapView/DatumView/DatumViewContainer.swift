@@ -19,9 +19,16 @@ protocol DatumViewPresenter {
     func show()
 }
 
+/**
+ Container view for the 3 `Datum` views (Swell/WaterTemp, Wind/AirTemp, Tide).
+ All 3 datums are live, but only one is not hidden.
+ A `Datum` is made up of the following itmes
+    * Circle ring
+    * A minimum of one triangle pointer
+    * Info label inside the circle ring
+ `Datum` classes allow for unique additions on top of this if necessary, see `SwellDatumPresenter`.
+ */
 class DatumViewContainer : UIView{
-    
-    
     var mapView : MapView?
     var screenSize : CGSize
     var periodCircle : CAShapeLayer?
@@ -84,6 +91,7 @@ class DatumViewContainer : UIView{
         Drawer().drawCircle(toView: self, forCenter: CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2), andRadius: self.frame.size.width/2, andColor: UIColor.black)
     }
     
+    ///Cycles through the `Datum'`s when the user taps on the DatumContainer.
     func iterateThroughDatumPresenters(){
         for i in 0..<presenters.count
         {
@@ -141,6 +149,7 @@ class DatumViewContainer : UIView{
     }
     
     //MARK: - Environment Changes
+    ///Letting `Datum`'s know to update there heading respsectively.
     func headingChanged(heading:Double)
     {
         for i in 0..<presenters.count
@@ -149,6 +158,7 @@ class DatumViewContainer : UIView{
         }
     }
     
+    ///Letting `Datum`'s know to update their current location.
     func locationChanged(location:CLLocation){
         for i in 0..<presenters.count
         {
@@ -157,6 +167,7 @@ class DatumViewContainer : UIView{
         //request for upated data
     }
     
+    //Letting `Datum`'s know to update there current hour (time).
     func timeChanged(hour:Int){
         //look into future dataset for information to present
         for i in 0..<presenters.count
@@ -164,26 +175,4 @@ class DatumViewContainer : UIView{
             presenters[i].updateAccodringToTime(hour: hour)
         }
     }
-    
-//    //MARK: DataManagerReceiverDelegateMethods
-//    func windForecastReceived(withData arr: [WindPacket]?, fromRequest request: DataRequest, andError error: Error?) {
-//        
-//    }
-//    
-//    func swellForecastReceived(withData arr: [WindPacket]?, fromRequest request: DataRequest, andError error: Error?) {
-//        
-//    }
-//    
-//    func tideForecastReceived(withData arr: [WindPacket]?, fromRequest request: DataRequest, andError error: Error?) {
-//        
-//    }
-//    
-//    func tempForecastReceived(withData arr: [WindPacket]?, fromRequest request: DataRequest, andError error: Error?) {
-//        
-//    }
-//    
-//    func wait(fromRequest request: DataRequest) {
-//        
-//    }
-    
 }

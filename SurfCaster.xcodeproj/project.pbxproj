@@ -222,9 +222,9 @@
 			isa = PBXGroup;
 			children = (
 				6921DD3E219D414600B0DF5C /* MapView.swift */,
+				6921DD3C219D3B2800B0DF5C /* LocationManager.swift */,
 				691714DF21B3183E005C0ABE /* DatumView */,
 				6921DD40219D4DA300B0DF5C /* Drawing */,
-				6921DD3C219D3B2800B0DF5C /* LocationManager.swift */,
 			);
 			path = MapView;
 			sourceTree = "<group>";
@@ -287,8 +287,8 @@
 				691C0F9B21D8AD1500305372 /* SurfCaster.entitlements */,
 				696D5B6921BCA5D800959CCC /* Media */,
 				697983EC219C01B7004814DC /* AppDelegate.swift */,
-				696D5B7021BCAAAC00959CCC /* Views */,
 				695155CA21B4F660008781F6 /* Utilities.swift */,
+				696D5B7021BCAAAC00959CCC /* Views */,
 				6921DD47219D557C00B0DF5C /* Data */,
 				697983F0219C01B7004814DC /* Main.storyboard */,
 				697983F3219C01B8004814DC /* Assets.xcassets */,

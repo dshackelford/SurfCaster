@@ -45,15 +45,15 @@ class DataManagerTests: XCTestCase, DataManagerReceiver {
         
     }
     
-    func swellForecastReceived(withData arr: [WindPacket]?, fromRequest request: DataRequest, andError error: Error?) {
+    func swellForecastReceived(withData arr: [SwellPacket]?, fromRequest request: DataRequest, andError error: Error?) {
         
     }
     
-    func tideForecastReceived(withData arr: [WindPacket]?, fromRequest request: DataRequest, andError error: Error?) {
+    func tideForecastReceived(withData arr: [TidePacket]?, fromRequest request: DataRequest, andError error: Error?) {
         
     }
     
-    func tempForecastReceived(withData arr: [WindPacket]?, fromRequest request: DataRequest, andError error: Error?) {
+    func tempForecastReceived(withData arr: [WaterTempPacket]?, fromRequest request: DataRequest, andError error: Error?) {
         
     }
     

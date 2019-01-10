@@ -9,6 +9,9 @@
 import UIKit
 import MapKit
 
+/**
+ Main View Controller holding the `MapView` and `ReportView`. 
+ */
 class ViewController: UIViewController {
     var aMapView : MapView?
     var locationManager : LocationManager?
@@ -17,7 +20,6 @@ class ViewController: UIViewController {
     var reportButton : UIButton?
 
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         
         print(FileUtilities.getDocsPath())
@@ -53,12 +55,15 @@ class ViewController: UIViewController {
         mapViewButton?.addTarget(self, action: #selector(ViewController.onMapButton), for: UIControl.Event.touchUpInside)
     }
     
+    ///Makes the `ReportView` the main view.
     @objc func onReportButton(){
         self.aMapView?.isHidden = true
         self.reportView?.isHidden = false
         
     }
     
+    
+    ///Makes the `MapView` the main view.
     @objc func onMapButton(){
         self.aMapView?.isHidden = false
         self.reportView?.isHidden = true

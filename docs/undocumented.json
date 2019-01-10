@@ -1,45 +1,2103 @@
 {
   "warnings": [
     {
-      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/AppDelegate.swift",
       "line": 12,
-      "symbol": "TidePacket",
+      "symbol": "AppDelegate",
       "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/AppDelegate.swift",
+      "line": 14,
+      "symbol": "AppDelegate.window",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/AppDelegate.swift",
+      "line": 17,
+      "symbol": "AppDelegate.application(_:didFinishLaunchingWithOptions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/AppDelegate.swift",
+      "line": 23,
+      "symbol": "AppDelegate.applicationWillResignActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/AppDelegate.swift",
+      "line": 28,
+      "symbol": "AppDelegate.applicationDidEnterBackground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/AppDelegate.swift",
+      "line": 33,
+      "symbol": "AppDelegate.applicationWillEnterForeground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/AppDelegate.swift",
+      "line": 37,
+      "symbol": "AppDelegate.applicationDidBecomeActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/AppDelegate.swift",
+      "line": 41,
+      "symbol": "AppDelegate.applicationWillTerminate(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 18,
+      "symbol": "DataManagerReceiver.windForecastReceived(withData:fromRequest:andError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 19,
+      "symbol": "DataManagerReceiver.swellForecastReceived(withData:fromRequest:andError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 20,
+      "symbol": "DataManagerReceiver.tideForecastReceived(withData:fromRequest:andError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 21,
+      "symbol": "DataManagerReceiver.tempForecastReceived(withData:fromRequest:andError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 22,
+      "symbol": "DataManagerReceiver.wait(fromRequest:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 28,
+      "symbol": "DataRequest",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 29,
+      "symbol": "DataRequest.date",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 30,
+      "symbol": "DataRequest.loc",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 31,
+      "symbol": "DataRequest.receiver",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 32,
+      "symbol": "DataRequest.fetching",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 33,
+      "symbol": "DataRequest.countyName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 35,
+      "symbol": "DataRequest.init(withDate:andLocation:forReceiver:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 45,
+      "symbol": "DataRequest.foundAllSpots(spots:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 49,
+      "symbol": "DataRequest.foundCountyName(name:forLoc:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 58,
+      "symbol": "DataManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 60,
+      "symbol": "DataManager.locDB",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 61,
+      "symbol": "DataManager.forecastDB",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 62,
+      "symbol": "DataManager.requests",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 64,
+      "symbol": "DataManager.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 72,
+      "symbol": "DataManager.getWindForecast(withRequest:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 77,
+      "symbol": "DataManager.getSwellForecast(forLocation:andDate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 80,
+      "symbol": "DataManager.getWaterTempForecast(forLocation:andDate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 83,
+      "symbol": "DataManager.getAirTempForecast(forLocation:andDate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 86,
+      "symbol": "DataManager.getTideForecast(withRequest:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 92,
+      "symbol": "DataManager.fetchedTempData(data:request:county:error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 96,
+      "symbol": "DataManager.fetchedTideData(dataArr:request:county:error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 107,
+      "symbol": "DataManager.fetchedSwellData(dataArr:request:county:error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 111,
+      "symbol": "DataManager.fetchedWindData(dataArr:request:county:error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 121,
+      "symbol": "DataManager.fetchedAllSpots(dataArr:error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 133,
+      "symbol": "DataManager.foundCountyName(name:forLoc:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 137,
+      "symbol": "DataManager.foundAllSpots(spots:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 150,
+      "symbol": "DataManager.foundWindForecast(data:error:request:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/DataManager.swift",
+      "line": 171,
+      "symbol": "DataManager.foundTideForecast(data:error:request:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/ForecastDB.swift",
+      "line": 18,
+      "symbol": "ForecastDBDelegate.foundWindForecast(data:error:request:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/ForecastDB.swift",
+      "line": 19,
+      "symbol": "ForecastDBDelegate.foundTideForecast(data:error:request:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/ForecastDB.swift",
+      "line": 39,
+      "symbol": "ForecastDB.dbPath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/ForecastDB.swift",
+      "line": 40,
+      "symbol": "ForecastDB.db",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/ForecastDB.swift",
+      "line": 41,
+      "symbol": "ForecastDB.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/ForecastDB.swift",
+      "line": 42,
+      "symbol": "ForecastDB.init(withDelegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/ForecastDB.swift",
+      "line": 50,
+      "symbol": "ForecastDB.setUpDB()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/ForecastDB.swift",
+      "line": 70,
+      "symbol": "ForecastDB.getWindForecast(forRequest:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/ForecastDB.swift",
+      "line": 102,
+      "symbol": "ForecastDB.getSwellForecast(forRequest:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/ForecastDB.swift",
+      "line": 106,
+      "symbol": "ForecastDB.getTideForecast(forRequest:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/ForecastDB.swift",
+      "line": 141,
+      "symbol": "ForecastDB.updateTempTable(withArr:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/ForecastDB.swift",
+      "line": 151,
+      "symbol": "ForecastDB.updateWindTable(withArr:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/ForecastDB.swift",
+      "line": 174,
+      "symbol": "ForecastDB.updateTideTable(withArr:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/ForecastDB.swift",
+      "line": 196,
+      "symbol": "ForecastDB.findTimeGMTTimeInterval(From:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/ForecastDB.swift",
+      "line": 222,
+      "symbol": "ForecastDB.findSpitDateFromDate(date:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/ForecastDB.swift",
+      "line": 232,
+      "symbol": "ForecastDB.foundCountyName(name:forLoc:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/ForecastDB.swift",
+      "line": 236,
+      "symbol": "ForecastDB.foundAllSpots(spots:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/LocationsDB.swift",
+      "line": 17,
+      "symbol": "LocationsDBDelegate.foundCountyName(name:forLoc:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/LocationsDB.swift",
+      "line": 18,
+      "symbol": "LocationsDBDelegate.foundAllSpots(spots:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/LocationsDB.swift",
+      "line": 27,
+      "symbol": "LocationsDB.dbPath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/LocationsDB.swift",
+      "line": 28,
+      "symbol": "LocationsDB.db",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/LocationsDB.swift",
+      "line": 29,
+      "symbol": "LocationsDB.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/LocationsDB.swift",
+      "line": 31,
+      "symbol": "LocationsDB.init(withDelegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/LocationsDB.swift",
+      "line": 39,
+      "symbol": "LocationsDB.setUpDB()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/LocationsDB.swift",
+      "line": 58,
+      "symbol": "LocationsDB.getCountyNameFromLoc(loc:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/LocationsDB.swift",
+      "line": 99,
+      "symbol": "LocationsDB.convert(PrettyCountyName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/LocationsDB.swift",
+      "line": 104,
+      "symbol": "LocationsDB.getAllSpots()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/Databases/LocationsDB.swift",
+      "line": 139,
+      "symbol": "LocationsDB.update(withAllSpots:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SpitCastData.swift",
+      "line": 17,
+      "symbol": "SpitCastDataDelegate.fetchedTempData(data:request:county:error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SpitCastData.swift",
+      "line": 19,
+      "symbol": "SpitCastDataDelegate.fetchedTideData(dataArr:request:county:error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SpitCastData.swift",
+      "line": 21,
+      "symbol": "SpitCastDataDelegate.fetchedSwellData(dataArr:request:county:error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SpitCastData.swift",
+      "line": 23,
+      "symbol": "SpitCastDataDelegate.fetchedWindData(dataArr:request:county:error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SpitCastData.swift",
+      "line": 25,
+      "symbol": "SpitCastDataDelegate.fetchedAllSpots(dataArr:error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SpitCastData.swift",
+      "line": 33,
+      "symbol": "SpitCastData.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SpitCastData.swift",
+      "line": 35,
+      "symbol": "SpitCastData.init(delegateInit:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 15,
+      "symbol": "TidePacket.dateStr",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 16,
+      "symbol": "TidePacket.day",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 17,
+      "symbol": "TidePacket.gmt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 18,
+      "symbol": "TidePacket.hour",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 19,
+      "symbol": "TidePacket.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 20,
+      "symbol": "TidePacket.tideFt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 21,
+      "symbol": "TidePacket.tideM",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 23,
+      "symbol": "TidePacket.CodingKeys",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 24,
+      "symbol": "TidePacket.CodingKeys.dateStr",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 25,
+      "symbol": "TidePacket.CodingKeys.day",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 26,
+      "symbol": "TidePacket.CodingKeys.gmt",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 27,
+      "symbol": "TidePacket.CodingKeys.hour",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 28,
+      "symbol": "TidePacket.CodingKeys.name",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 29,
+      "symbol": "TidePacket.CodingKeys.tideFt",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 30,
+      "symbol": "TidePacket.CodingKeys.tideM",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
       "line": 44,
-      "symbol": "WindPacket",
-      "symbol_kind": "source.lang.swift.decl.class",
+      "symbol": "TidePacket.init(withResult:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
-      "line": 87,
-      "symbol": "WaterTempPacket",
-      "symbol_kind": "source.lang.swift.decl.class",
+      "line": 57,
+      "symbol": "WindPacket.dateStr",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 58,
+      "symbol": "WindPacket.day",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 59,
+      "symbol": "WindPacket.directionDegrees",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 60,
+      "symbol": "WindPacket.directionCompass",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 61,
+      "symbol": "WindPacket.gmt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 62,
+      "symbol": "WindPacket.hour",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 63,
+      "symbol": "WindPacket.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 64,
+      "symbol": "WindPacket.speedKTS",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 65,
+      "symbol": "WindPacket.speedMPH",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 67,
+      "symbol": "WindPacket.CodingKeys",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 68,
+      "symbol": "WindPacket.CodingKeys.dateStr",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 69,
+      "symbol": "WindPacket.CodingKeys.day",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 70,
+      "symbol": "WindPacket.CodingKeys.directionDegrees",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 71,
+      "symbol": "WindPacket.CodingKeys.directionCompass",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 72,
+      "symbol": "WindPacket.CodingKeys.gmt",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 73,
+      "symbol": "WindPacket.CodingKeys.hour",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 74,
+      "symbol": "WindPacket.CodingKeys.name",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 75,
+      "symbol": "WindPacket.CodingKeys.speedKTS",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 76,
+      "symbol": "WindPacket.CodingKeys.speedMPH",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 98,
+      "symbol": "WindPacket.init(withResult:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 113,
+      "symbol": "WaterTempPacket.buoyId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 114,
+      "symbol": "WaterTempPacket.tempC",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
       "line": 115,
-      "symbol": "SwellPacket",
-      "symbol_kind": "source.lang.swift.decl.class",
+      "symbol": "WaterTempPacket.county",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 116,
+      "symbol": "WaterTempPacket.tempF",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 117,
+      "symbol": "WaterTempPacket.date",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 118,
+      "symbol": "WaterTempPacket.wetsuit",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 120,
+      "symbol": "WaterTempPacket.CodingKeys",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 121,
+      "symbol": "WaterTempPacket.CodingKeys.buoyId",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 122,
+      "symbol": "WaterTempPacket.CodingKeys.tempC",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 123,
+      "symbol": "WaterTempPacket.CodingKeys.county",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 124,
+      "symbol": "WaterTempPacket.CodingKeys.tempF",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 125,
+      "symbol": "WaterTempPacket.CodingKeys.date",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 126,
+      "symbol": "WaterTempPacket.CodingKeys.wetsuit",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 142,
+      "symbol": "SwellPacket.subSwell1",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 143,
+      "symbol": "SwellPacket.subSwell2",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 144,
+      "symbol": "SwellPacket.subSwell3",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 145,
+      "symbol": "SwellPacket.subSwell4",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 146,
+      "symbol": "SwellPacket.date",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 147,
+      "symbol": "SwellPacket.day",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 148,
+      "symbol": "SwellPacket.gmt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 149,
+      "symbol": "SwellPacket.hour",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 150,
+      "symbol": "SwellPacket.hst",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 151,
+      "symbol": "SwellPacket.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 153,
+      "symbol": "SwellPacket.CodingKeys",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 154,
+      "symbol": "SwellPacket.CodingKeys.subSwell1",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 155,
+      "symbol": "SwellPacket.CodingKeys.subSwell2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 156,
+      "symbol": "SwellPacket.CodingKeys.subSwell3",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 157,
+      "symbol": "SwellPacket.CodingKeys.subSwell4",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
       "line": 158,
-      "symbol": "SubSwellPacket",
-      "symbol_kind": "source.lang.swift.decl.class",
+      "symbol": "SwellPacket.CodingKeys.date",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
-      "line": 177,
-      "symbol": "SpotPacket",
+      "line": 159,
+      "symbol": "SwellPacket.CodingKeys.day",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 160,
+      "symbol": "SwellPacket.CodingKeys.gmt",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 161,
+      "symbol": "SwellPacket.CodingKeys.hour",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 162,
+      "symbol": "SwellPacket.CodingKeys.hst",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 163,
+      "symbol": "SwellPacket.CodingKeys.name",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 185,
+      "symbol": "SubSwellPacket.dir",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 186,
+      "symbol": "SubSwellPacket.hs",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 187,
+      "symbol": "SubSwellPacket.tp",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 189,
+      "symbol": "SubSwellPacket.CodingKeys",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 190,
+      "symbol": "SubSwellPacket.CodingKeys.dir",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 191,
+      "symbol": "SubSwellPacket.CodingKeys.hs",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 192,
+      "symbol": "SubSwellPacket.CodingKeys.tp",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 205,
+      "symbol": "SpotPacket.county",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 206,
+      "symbol": "SpotPacket.lat",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 207,
+      "symbol": "SpotPacket.lon",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 208,
+      "symbol": "SpotPacket.spotID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 209,
+      "symbol": "SpotPacket.spotName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 212,
+      "symbol": "SpotPacket.CodingKeys",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 213,
+      "symbol": "SpotPacket.CodingKeys.county",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 214,
+      "symbol": "SpotPacket.CodingKeys.lat",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 215,
+      "symbol": "SpotPacket.CodingKeys.lon",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 216,
+      "symbol": "SpotPacket.CodingKeys.spotID",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 217,
+      "symbol": "SpotPacket.CodingKeys.spotName",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 229,
+      "symbol": "SpotPacket.init(latInit:lonInit:spotIDInit:spotNameInit:countyName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Utilities.swift",
+      "line": 11,
+      "symbol": "FileUtilities",
       "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Utilities.swift",
+      "line": 13,
+      "symbol": "FileUtilities.getDocsPath()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/DatumViewContainer.swift",
+      "line": 14,
+      "symbol": "DatumViewPresenter",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/DatumViewContainer.swift",
+      "line": 15,
+      "symbol": "DatumViewPresenter.rotateAccordingToAngle(angle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/DatumViewContainer.swift",
+      "line": 16,
+      "symbol": "DatumViewPresenter.updateAccordingToLocation(loc:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/DatumViewContainer.swift",
+      "line": 17,
+      "symbol": "DatumViewPresenter.updateAccodringToTime(hour:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/DatumViewContainer.swift",
+      "line": 18,
+      "symbol": "DatumViewPresenter.hide()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/DatumViewContainer.swift",
+      "line": 19,
+      "symbol": "DatumViewPresenter.show()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/DatumViewContainer.swift",
+      "line": 32,
+      "symbol": "DatumViewContainer.mapView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/DatumViewContainer.swift",
+      "line": 33,
+      "symbol": "DatumViewContainer.screenSize",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/DatumViewContainer.swift",
+      "line": 34,
+      "symbol": "DatumViewContainer.periodCircle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/DatumViewContainer.swift",
+      "line": 35,
+      "symbol": "DatumViewContainer.periodAngle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/DatumViewContainer.swift",
+      "line": 36,
+      "symbol": "DatumViewContainer.dataManager",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/DatumViewContainer.swift",
+      "line": 38,
+      "symbol": "DatumViewContainer.location",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/DatumViewContainer.swift",
+      "line": 39,
+      "symbol": "DatumViewContainer.time",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/DatumViewContainer.swift",
+      "line": 41,
+      "symbol": "DatumViewContainer.currentDatumIndex",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/DatumViewContainer.swift",
+      "line": 42,
+      "symbol": "DatumViewContainer.presenters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/DatumViewContainer.swift",
+      "line": 44,
+      "symbol": "DatumViewContainer.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/DatumViewContainer.swift",
+      "line": 48,
+      "symbol": "DatumViewContainer.init(initWithMap:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/DatumViewContainer.swift",
+      "line": 117,
+      "symbol": "DatumViewContainer.addGestures()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/DatumViewContainer.swift",
+      "line": 132,
+      "symbol": "DatumViewContainer.hangleLongPress(recognizer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/DatumViewContainer.swift",
+      "line": 136,
+      "symbol": "DatumViewContainer.handleTap(recognizer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/DatumViewContainer.swift",
+      "line": 140,
+      "symbol": "DatumViewContainer.handlePan(recognizer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/DatumViewContainer.swift",
+      "line": 171,
+      "symbol": "DatumViewContainer.timeChanged(hour:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/SwellDatumPresenter.swift",
+      "line": 21,
+      "symbol": "SwellDatumPresenter.infoLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/SwellDatumPresenter.swift",
+      "line": 22,
+      "symbol": "SwellDatumPresenter.periodCircle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/SwellDatumPresenter.swift",
+      "line": 23,
+      "symbol": "SwellDatumPresenter.periodAngle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/SwellDatumPresenter.swift",
+      "line": 24,
+      "symbol": "SwellDatumPresenter.periodView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/SwellDatumPresenter.swift",
+      "line": 25,
+      "symbol": "SwellDatumPresenter.container",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/SwellDatumPresenter.swift",
+      "line": 27,
+      "symbol": "SwellDatumPresenter.init(frame:andContainer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/SwellDatumPresenter.swift",
+      "line": 46,
+      "symbol": "SwellDatumPresenter.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/SwellDatumPresenter.swift",
+      "line": 51,
+      "symbol": "SwellDatumPresenter.rotateAccordingToAngle(angle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/SwellDatumPresenter.swift",
+      "line": 56,
+      "symbol": "SwellDatumPresenter.updateAccordingToLocation(loc:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/SwellDatumPresenter.swift",
+      "line": 60,
+      "symbol": "SwellDatumPresenter.updateAccodringToTime(hour:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/SwellDatumPresenter.swift",
+      "line": 64,
+      "symbol": "SwellDatumPresenter.hide()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/SwellDatumPresenter.swift",
+      "line": 68,
+      "symbol": "SwellDatumPresenter.show()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/SwellDatumPresenter.swift",
+      "line": 73,
+      "symbol": "SwellDatumPresenter.startPeriodTimer()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/SwellDatumPresenter.swift",
+      "line": 88,
+      "symbol": "SwellDatumPresenter.animateSwellPeriod(forAngle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/SwellDatumPresenter.swift",
+      "line": 99,
+      "symbol": "SwellDatumPresenter.drawDirectionPoint(angleDeg:scale:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/SwellDatumPresenter.swift",
+      "line": 110,
+      "symbol": "SwellDatumPresenter.windForecastReceived(withData:fromRequest:andError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/SwellDatumPresenter.swift",
+      "line": 113,
+      "symbol": "SwellDatumPresenter.swellForecastReceived(withData:fromRequest:andError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/SwellDatumPresenter.swift",
+      "line": 117,
+      "symbol": "SwellDatumPresenter.tideForecastReceived(withData:fromRequest:andError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/SwellDatumPresenter.swift",
+      "line": 121,
+      "symbol": "SwellDatumPresenter.tempForecastReceived(withData:fromRequest:andError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/SwellDatumPresenter.swift",
+      "line": 125,
+      "symbol": "SwellDatumPresenter.wait(fromRequest:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/TideDatumPresenter.swift",
+      "line": 19,
+      "symbol": "TideDatumPresenter.container",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/TideDatumPresenter.swift",
+      "line": 20,
+      "symbol": "TideDatumPresenter.dataManager",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/TideDatumPresenter.swift",
+      "line": 21,
+      "symbol": "TideDatumPresenter.maxTide",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/TideDatumPresenter.swift",
+      "line": 22,
+      "symbol": "TideDatumPresenter.minTide",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/TideDatumPresenter.swift",
+      "line": 24,
+      "symbol": "TideDatumPresenter.init(frame:andContainer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/TideDatumPresenter.swift",
+      "line": 36,
+      "symbol": "TideDatumPresenter.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/TideDatumPresenter.swift",
+      "line": 42,
+      "symbol": "TideDatumPresenter.rotateAccordingToAngle(angle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/TideDatumPresenter.swift",
+      "line": 46,
+      "symbol": "TideDatumPresenter.updateAccordingToLocation(loc:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/TideDatumPresenter.swift",
+      "line": 50,
+      "symbol": "TideDatumPresenter.updateAccodringToTime(hour:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/TideDatumPresenter.swift",
+      "line": 56,
+      "symbol": "TideDatumPresenter.hide()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/TideDatumPresenter.swift",
+      "line": 60,
+      "symbol": "TideDatumPresenter.show()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/TideDatumPresenter.swift",
+      "line": 65,
+      "symbol": "TideDatumPresenter.drawTideLine(tideInit:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/TideDatumPresenter.swift",
+      "line": 74,
+      "symbol": "TideDatumPresenter.drawDirectionPoint(angleDeg:scale:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/TideDatumPresenter.swift",
+      "line": 83,
+      "symbol": "TideDatumPresenter.windForecastReceived(withData:fromRequest:andError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/TideDatumPresenter.swift",
+      "line": 86,
+      "symbol": "TideDatumPresenter.swellForecastReceived(withData:fromRequest:andError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/TideDatumPresenter.swift",
+      "line": 90,
+      "symbol": "TideDatumPresenter.tideForecastReceived(withData:fromRequest:andError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/TideDatumPresenter.swift",
+      "line": 99,
+      "symbol": "TideDatumPresenter.tempForecastReceived(withData:fromRequest:andError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/TideDatumPresenter.swift",
+      "line": 103,
+      "symbol": "TideDatumPresenter.wait(fromRequest:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/WindDatumPresenter.swift",
+      "line": 20,
+      "symbol": "WindDatumPresenter.infoLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/WindDatumPresenter.swift",
+      "line": 21,
+      "symbol": "WindDatumPresenter.angleOffset",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/WindDatumPresenter.swift",
+      "line": 22,
+      "symbol": "WindDatumPresenter.dataManager",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/WindDatumPresenter.swift",
+      "line": 23,
+      "symbol": "WindDatumPresenter.container",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/WindDatumPresenter.swift",
+      "line": 25,
+      "symbol": "WindDatumPresenter.init(frame:andContainer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/WindDatumPresenter.swift",
+      "line": 39,
+      "symbol": "WindDatumPresenter.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/WindDatumPresenter.swift",
+      "line": 45,
+      "symbol": "WindDatumPresenter.rotateAccordingToAngle(angle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/WindDatumPresenter.swift",
+      "line": 51,
+      "symbol": "WindDatumPresenter.updateAccordingToLocation(loc:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/WindDatumPresenter.swift",
+      "line": 56,
+      "symbol": "WindDatumPresenter.updateAccodringToTime(hour:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/WindDatumPresenter.swift",
+      "line": 62,
+      "symbol": "WindDatumPresenter.hide()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/WindDatumPresenter.swift",
+      "line": 66,
+      "symbol": "WindDatumPresenter.show()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/WindDatumPresenter.swift",
+      "line": 72,
+      "symbol": "WindDatumPresenter.drawDirectionPoint(angleDeg:scale:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/WindDatumPresenter.swift",
+      "line": 79,
+      "symbol": "WindDatumPresenter.windForecastReceived(withData:fromRequest:andError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/WindDatumPresenter.swift",
+      "line": 101,
+      "symbol": "WindDatumPresenter.swellForecastReceived(withData:fromRequest:andError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/WindDatumPresenter.swift",
+      "line": 105,
+      "symbol": "WindDatumPresenter.tideForecastReceived(withData:fromRequest:andError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/WindDatumPresenter.swift",
+      "line": 109,
+      "symbol": "WindDatumPresenter.tempForecastReceived(withData:fromRequest:andError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/DatumView/WindDatumPresenter.swift",
+      "line": 113,
+      "symbol": "WindDatumPresenter.wait(fromRequest:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/LocationManager.swift",
+      "line": 18,
+      "symbol": "LocationManager.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/LocationManager.swift",
+      "line": 26,
+      "symbol": "LocationManager.enableAuthorization()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/LocationManager.swift",
+      "line": 30,
+      "symbol": "LocationManager.locationManager(_:didUpdateLocations:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/LocationManager.swift",
+      "line": 33,
+      "symbol": "LocationManager.locationManager(_:didUpdateHeading:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/MapView.swift",
+      "line": 18,
+      "symbol": "MapView.vc",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/MapView.swift",
+      "line": 19,
+      "symbol": "MapView.lastCenter",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/MapView.swift",
+      "line": 20,
+      "symbol": "MapView.currentHeading",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/MapView.swift",
+      "line": 21,
+      "symbol": "MapView.timeSlider",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/MapView.swift",
+      "line": 22,
+      "symbol": "MapView.datumView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/MapView.swift",
+      "line": 24,
+      "symbol": "MapView.init(vc:frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/MapView.swift",
+      "line": 50,
+      "symbol": "MapView.addTimeSlider()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/MapView.swift",
+      "line": 67,
+      "symbol": "MapView.gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/MapView.swift",
+      "line": 92,
+      "symbol": "MapView.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/MapView.swift",
+      "line": 97,
+      "symbol": "MapView.mapView(_:didUpdate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/MapView.swift",
+      "line": 117,
+      "symbol": "MapView.mapView(_:regionWillChangeAnimated:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/MapView.swift",
+      "line": 123,
+      "symbol": "MapView.mapView(_:regionDidChangeAnimated:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/MapView.swift",
+      "line": 130,
+      "symbol": "MapView.foundAllSpots(spots:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/MapView/MapView.swift",
+      "line": 147,
+      "symbol": "MapView.foundCountyName(name:forLoc:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/ReportView.swift",
+      "line": 20,
+      "symbol": "ReportView.location",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/ReportView.swift",
+      "line": 21,
+      "symbol": "ReportView.rangeSlider",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/ReportView.swift",
+      "line": 23,
+      "symbol": "ReportView.init(frame:style:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/ReportView.swift",
+      "line": 42,
+      "symbol": "ReportView.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/ReportView.swift",
+      "line": 53,
+      "symbol": "ReportView.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/ReportView.swift",
+      "line": 70,
+      "symbol": "ReportView.numberOfSections(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/ReportView.swift",
+      "line": 74,
+      "symbol": "ReportView.tableView(_:titleForHeaderInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/ReportView.swift",
+      "line": 91,
+      "symbol": "ReportView.tableView(_:heightForHeaderInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/ReportView.swift",
+      "line": 96,
+      "symbol": "ReportView.tableView(_:heightForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/ReportView.swift",
+      "line": 113,
+      "symbol": "ReportView.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/ReportView.swift",
+      "line": 167,
+      "symbol": "ReportView.rangeSliderValueChange()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/TableViewCells/RatingCell.swift",
+      "line": 13,
+      "symbol": "RatingCell",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/TableViewCells/RatingCell.swift",
+      "line": 15,
+      "symbol": "RatingCell.star1",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/TableViewCells/RatingCell.swift",
+      "line": 16,
+      "symbol": "RatingCell.star2",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/TableViewCells/RatingCell.swift",
+      "line": 17,
+      "symbol": "RatingCell.star3",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/TableViewCells/RatingCell.swift",
+      "line": 18,
+      "symbol": "RatingCell.star4",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/TableViewCells/RatingCell.swift",
+      "line": 19,
+      "symbol": "RatingCell.star5",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/TableViewCells/RatingCell.swift",
+      "line": 21,
+      "symbol": "RatingCell.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/TableViewCells/SliderCell.swift",
+      "line": 13,
+      "symbol": "SliderCell",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/TableViewCells/SliderCell.swift",
+      "line": 15,
+      "symbol": "SliderCell.rangeSlider",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/TableViewCells/SliderCell.swift",
+      "line": 16,
+      "symbol": "SliderCell.startTimeLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/TableViewCells/SliderCell.swift",
+      "line": 17,
+      "symbol": "SliderCell.endTimeLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/TableViewCells/SliderCell.swift",
+      "line": 19,
+      "symbol": "SliderCell.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/TableViewCells/SurfDataCell.swift",
+      "line": 12,
+      "symbol": "SurfDataCell",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/TableViewCells/SurfDataCell.swift",
+      "line": 14,
+      "symbol": "SurfDataCell.mainLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/TableViewCells/SurfDataCell.swift",
+      "line": 15,
+      "symbol": "SurfDataCell.dataLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/TableViewCells/SurfDataCell.swift",
+      "line": 16,
+      "symbol": "SurfDataCell.imageIconView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/TableViewCells/SurfDataCell.swift",
+      "line": 28,
+      "symbol": "SurfDataCell.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/TableViewCells/TextInputCell.swift",
+      "line": 12,
+      "symbol": "TextInputCell",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/TableViewCells/TextInputCell.swift",
+      "line": 14,
+      "symbol": "TextInputCell.textInput",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ReportView/TableViewCells/TextInputCell.swift",
+      "line": 16,
+      "symbol": "TextInputCell.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ViewController.swift",
+      "line": 16,
+      "symbol": "ViewController.aMapView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ViewController.swift",
+      "line": 17,
+      "symbol": "ViewController.locationManager",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ViewController.swift",
+      "line": 18,
+      "symbol": "ViewController.reportView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ViewController.swift",
+      "line": 19,
+      "symbol": "ViewController.mapViewButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ViewController.swift",
+      "line": 20,
+      "symbol": "ViewController.reportButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ViewController.swift",
+      "line": 22,
+      "symbol": "ViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Views/ViewController.swift",
+      "line": 41,
+      "symbol": "ViewController.addButtons()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],

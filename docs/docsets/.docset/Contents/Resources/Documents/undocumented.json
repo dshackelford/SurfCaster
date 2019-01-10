@@ -1,0 +1,19 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 44,
+      "symbol": "TidePacket.init(withResult:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Dshack/Desktop/SurfCaster/SurfCaster/Data/SurfData.swift",
+      "line": 98,
+      "symbol": "WindPacket.init(withResult:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/Dshack/Desktop/SurfCaster"
+}

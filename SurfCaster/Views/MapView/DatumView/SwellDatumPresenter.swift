@@ -10,6 +10,12 @@ import Foundation
 import UIKit
 import CoreLocation
 
+/**
+ `Datum` presenting the Swell Data.
+ Info label will desribe the current water temperature.
+ Rings oscillating inside the circle ring indicate the period of the swell.
+ Indicator triangles (as many as swells for the current hour) will scale relative to weight of swell.
+ */
 class SwellDatumPresenter : UIView, DatumViewPresenter{
     
     var infoLabel : UILabel
@@ -98,5 +104,25 @@ class SwellDatumPresenter : UIView, DatumViewPresenter{
         self.addSubview(aView)
         aDrawer.drawTriangle(toView: aView, forCenter: self.center,forRadius:self.frame.size.width/2 + 15, forLength: 10, andColor: UIColor.purple)
         aView.transform = CGAffineTransform(rotationAngle: CGFloat(285/180.0*Double.pi))
+    }
+    
+    //MARK: DataManagerReceiver Delegate Methods
+    func windForecastReceived(withData arr: [WindPacket]?, fromRequest request: DataRequest, andError error: Error?) {
+    }
+    
+    func swellForecastReceived(withData arr: [SwellPacket]?, fromRequest request: DataRequest, andError error: Error?) {
+        
+    }
+    
+    func tideForecastReceived(withData arr: [TidePacket]?, fromRequest request: DataRequest, andError error: Error?) {
+        
+    }
+    
+    func tempForecastReceived(withData arr: [WaterTempPacket]?, fromRequest request: DataRequest, andError error: Error?) {
+        
+    }
+    
+    func wait(fromRequest request: DataRequest) {
+        
     }
 }

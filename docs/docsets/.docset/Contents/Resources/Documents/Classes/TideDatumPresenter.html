@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TideDatumPresenter Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/TideDatumPresenter" class="dashAnchor"></a>
+    <a title="TideDatumPresenter Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (12% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        TideDatumPresenter Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DataManager.html">DataManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DataRequest.html">DataRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DatumViewContainer.html">DatumViewContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Drawer.html">Drawer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FileUtilities.html">FileUtilities</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ForecastDB.html">ForecastDB</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LocationManager.html">LocationManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LocationsDB.html">LocationsDB</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MapView.html">MapView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RatingCell.html">RatingCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReportView.html">ReportView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SliderCell.html">SliderCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SpitCastData.html">SpitCastData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SpotPacket.html">SpotPacket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SpotPacket/CodingKeys.html">– CodingKeys</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SubSwellPacket.html">SubSwellPacket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SubSwellPacket/CodingKeys.html">– CodingKeys</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SurfDataCell.html">SurfDataCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SwellDatumPresenter.html">SwellDatumPresenter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SwellPacket.html">SwellPacket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SwellPacket/CodingKeys.html">– CodingKeys</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TextInputCell.html">TextInputCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TideDatumPresenter.html">TideDatumPresenter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TidePacket.html">TidePacket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TidePacket/CodingKeys.html">– CodingKeys</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ViewController.html">ViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WaterTempPacket.html">WaterTempPacket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WaterTempPacket/CodingKeys.html">– CodingKeys</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WindDatumPresenter.html">WindDatumPresenter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WindPacket.html">WindPacket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WindPacket/CodingKeys.html">– CodingKeys</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/DataManagerReceiver.html">DataManagerReceiver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DatumViewPresenter.html">DatumViewPresenter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ForecastDBDelegate.html">ForecastDBDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/LocationsDBDelegate.html">LocationsDBDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SpitCastDataDelegate.html">SpitCastDataDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>TideDatumPresenter</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">TideDatumPresenter</span> <span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="../Protocols/DatumViewPresenter.html">DatumViewPresenter</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/DataManagerReceiver.html">DataManagerReceiver</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Handles the presentation of Tide Data.
+Holds math for caculating the partial circle and showing the direction of the indicator triangle.
+Indicator triangle will only be point up or down, for the tide coming in or out.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SurfCaster18TideDatumPresenterC9containerAA0D13ViewContainerCvp"></a>
+                    <a name="//apple_ref/swift/Property/container" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SurfCaster18TideDatumPresenterC9containerAA0D13ViewContainerCvp">container</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">container</span><span class="p">:</span> <span class="kt"><a href="../Classes/DatumViewContainer.html">DatumViewContainer</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SurfCaster18TideDatumPresenterC11dataManagerAA04DataG0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/dataManager" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SurfCaster18TideDatumPresenterC11dataManagerAA04DataG0Cvp">dataManager</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dataManager</span><span class="p">:</span> <span class="kt"><a href="../Classes/DataManager.html">DataManager</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SurfCaster18TideDatumPresenterC03maxC0Sdvp"></a>
+                    <a name="//apple_ref/swift/Property/maxTide" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SurfCaster18TideDatumPresenterC03maxC0Sdvp">maxTide</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">maxTide</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SurfCaster18TideDatumPresenterC03minC0Sdvp"></a>
+                    <a name="//apple_ref/swift/Property/minTide" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SurfCaster18TideDatumPresenterC03minC0Sdvp">minTide</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">minTide</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SurfCaster18TideDatumPresenterC5frame12andContainerACSo6CGRectV_AA0d4ViewH0Ctcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(frame:andContainer:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SurfCaster18TideDatumPresenterC5frame12andContainerACSo6CGRectV_AA0d4ViewH0Ctcfc">init(frame:andContainer:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">,</span> <span class="n">andContainer</span> <span class="nv">containerInit</span><span class="p">:</span> <span class="kt"><a href="../Classes/DatumViewContainer.html">DatumViewContainer</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@SurfCaster@objc(cs)TideDatumPresenter(im)initWithCoder:"></a>
+                    <a name="//apple_ref/swift/Method/init(coder:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@SurfCaster@objc(cs)TideDatumPresenter(im)initWithCoder:">init(coder:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">required</span> <span class="nf">init</span><span class="p">?(</span><span class="n">coder</span> <span class="nv">aDecoder</span><span class="p">:</span> <span class="kt">NSCoder</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SurfCaster18TideDatumPresenterC22rotateAccordingToAngle5angleySd_tF"></a>
+                    <a name="//apple_ref/swift/Method/rotateAccordingToAngle(angle:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SurfCaster18TideDatumPresenterC22rotateAccordingToAngle5angleySd_tF">rotateAccordingToAngle(angle:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">rotateAccordingToAngle</span><span class="p">(</span><span class="nv">angle</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SurfCaster18TideDatumPresenterC25updateAccordingToLocation3locySo10CLLocationC_tF"></a>
+                    <a name="//apple_ref/swift/Method/updateAccordingToLocation(loc:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SurfCaster18TideDatumPresenterC25updateAccordingToLocation3locySo10CLLocationC_tF">updateAccordingToLocation(loc:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">updateAccordingToLocation</span><span class="p">(</span><span class="nv">loc</span><span class="p">:</span> <span class="kt">CLLocation</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SurfCaster18TideDatumPresenterC21updateAccodringToTime4hourySi_tF"></a>
+                    <a name="//apple_ref/swift/Method/updateAccodringToTime(hour:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SurfCaster18TideDatumPresenterC21updateAccodringToTime4hourySi_tF">updateAccodringToTime(hour:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">updateAccodringToTime</span><span class="p">(</span><span class="nv">hour</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SurfCaster18TideDatumPresenterC4hideyyF"></a>
+                    <a name="//apple_ref/swift/Method/hide()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SurfCaster18TideDatumPresenterC4hideyyF">hide()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">hide</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SurfCaster18TideDatumPresenterC4showyyF"></a>
+                    <a name="//apple_ref/swift/Method/show()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SurfCaster18TideDatumPresenterC4showyyF">show()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">show</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SurfCaster18TideDatumPresenterC04drawC4Line8tideInitySd_tF"></a>
+                    <a name="//apple_ref/swift/Method/drawTideLine(tideInit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SurfCaster18TideDatumPresenterC04drawC4Line8tideInitySd_tF">drawTideLine(tideInit:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">drawTideLine</span><span class="p">(</span><span class="nv">tideInit</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SurfCaster18TideDatumPresenterC18drawDirectionPoint8angleDeg5scaleySd_SdtF"></a>
+                    <a name="//apple_ref/swift/Method/drawDirectionPoint(angleDeg:scale:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SurfCaster18TideDatumPresenterC18drawDirectionPoint8angleDeg5scaleySd_SdtF">drawDirectionPoint(angleDeg:scale:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">drawDirectionPoint</span><span class="p">(</span><span class="nv">angleDeg</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">scale</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/DataManagerReceiver%20Delegate%20Methods"></a>
+                <a name="//apple_ref/swift/Section/DataManagerReceiver Delegate Methods" class="dashAnchor"></a>
+                <a href="#/DataManagerReceiver%20Delegate%20Methods">
+                  <h3 class="section-name">DataManagerReceiver Delegate Methods</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SurfCaster18TideDatumPresenterC20windForecastReceived8withData11fromRequest8andErrorySayAA10WindPacketCGSg_AA0jL0Cs0N0_pSgtF"></a>
+                    <a name="//apple_ref/swift/Method/windForecastReceived(withData:fromRequest:andError:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SurfCaster18TideDatumPresenterC20windForecastReceived8withData11fromRequest8andErrorySayAA10WindPacketCGSg_AA0jL0Cs0N0_pSgtF">windForecastReceived(withData:fromRequest:andError:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">windForecastReceived</span><span class="p">(</span><span class="n">withData</span> <span class="nv">arr</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/WindPacket.html">WindPacket</a></span><span class="p">]?,</span> <span class="n">fromRequest</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/DataRequest.html">DataRequest</a></span><span class="p">,</span> <span class="n">andError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SurfCaster18TideDatumPresenterC21swellForecastReceived8withData11fromRequest8andErrorySayAA11SwellPacketCGSg_AA0jL0Cs0N0_pSgtF"></a>
+                    <a name="//apple_ref/swift/Method/swellForecastReceived(withData:fromRequest:andError:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SurfCaster18TideDatumPresenterC21swellForecastReceived8withData11fromRequest8andErrorySayAA11SwellPacketCGSg_AA0jL0Cs0N0_pSgtF">swellForecastReceived(withData:fromRequest:andError:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">swellForecastReceived</span><span class="p">(</span><span class="n">withData</span> <span class="nv">arr</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/SwellPacket.html">SwellPacket</a></span><span class="p">]?,</span> <span class="n">fromRequest</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/DataRequest.html">DataRequest</a></span><span class="p">,</span> <span class="n">andError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SurfCaster18TideDatumPresenterC20tideForecastReceived8withData11fromRequest8andErrorySayAA0C6PacketCGSg_AA0jL0Cs0N0_pSgtF"></a>
+                    <a name="//apple_ref/swift/Method/tideForecastReceived(withData:fromRequest:andError:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SurfCaster18TideDatumPresenterC20tideForecastReceived8withData11fromRequest8andErrorySayAA0C6PacketCGSg_AA0jL0Cs0N0_pSgtF">tideForecastReceived(withData:fromRequest:andError:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">tideForecastReceived</span><span class="p">(</span><span class="n">withData</span> <span class="nv">arr</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/TidePacket.html">TidePacket</a></span><span class="p">]?,</span> <span class="n">fromRequest</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/DataRequest.html">DataRequest</a></span><span class="p">,</span> <span class="n">andError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SurfCaster18TideDatumPresenterC20tempForecastReceived8withData11fromRequest8andErrorySayAA15WaterTempPacketCGSg_AA0jL0Cs0N0_pSgtF"></a>
+                    <a name="//apple_ref/swift/Method/tempForecastReceived(withData:fromRequest:andError:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SurfCaster18TideDatumPresenterC20tempForecastReceived8withData11fromRequest8andErrorySayAA15WaterTempPacketCGSg_AA0jL0Cs0N0_pSgtF">tempForecastReceived(withData:fromRequest:andError:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">tempForecastReceived</span><span class="p">(</span><span class="n">withData</span> <span class="nv">arr</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/WaterTempPacket.html">WaterTempPacket</a></span><span class="p">]?,</span> <span class="n">fromRequest</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/DataRequest.html">DataRequest</a></span><span class="p">,</span> <span class="n">andError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SurfCaster18TideDatumPresenterC4wait11fromRequestyAA04DataH0C_tF"></a>
+                    <a name="//apple_ref/swift/Method/wait(fromRequest:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SurfCaster18TideDatumPresenterC4wait11fromRequestyAA04DataH0C_tF">wait(fromRequest:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">wait</span><span class="p">(</span><span class="n">fromRequest</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/DataRequest.html">DataRequest</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-01-09)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

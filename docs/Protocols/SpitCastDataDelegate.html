@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SpitCastDataDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/SpitCastDataDelegate" class="dashAnchor"></a>
+    <a title="SpitCastDataDelegate Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (12% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SpitCastDataDelegate Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DataManager.html">DataManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DataRequest.html">DataRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DatumViewContainer.html">DatumViewContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Drawer.html">Drawer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FileUtilities.html">FileUtilities</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ForecastDB.html">ForecastDB</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LocationManager.html">LocationManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LocationsDB.html">LocationsDB</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MapView.html">MapView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RatingCell.html">RatingCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReportView.html">ReportView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SliderCell.html">SliderCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SpitCastData.html">SpitCastData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SpotPacket.html">SpotPacket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SpotPacket/CodingKeys.html">– CodingKeys</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SubSwellPacket.html">SubSwellPacket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SubSwellPacket/CodingKeys.html">– CodingKeys</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SurfDataCell.html">SurfDataCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SwellDatumPresenter.html">SwellDatumPresenter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SwellPacket.html">SwellPacket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SwellPacket/CodingKeys.html">– CodingKeys</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TextInputCell.html">TextInputCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TideDatumPresenter.html">TideDatumPresenter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TidePacket.html">TidePacket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TidePacket/CodingKeys.html">– CodingKeys</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ViewController.html">ViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WaterTempPacket.html">WaterTempPacket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WaterTempPacket/CodingKeys.html">– CodingKeys</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WindDatumPresenter.html">WindDatumPresenter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WindPacket.html">WindPacket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WindPacket/CodingKeys.html">– CodingKeys</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/DataManagerReceiver.html">DataManagerReceiver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DatumViewPresenter.html">DatumViewPresenter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ForecastDBDelegate.html">ForecastDBDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/LocationsDBDelegate.html">LocationsDBDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SpitCastDataDelegate.html">SpitCastDataDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SpitCastDataDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SpitCastDataDelegate</span></code></pre>
+
+                </div>
+              </div>
+            <p>Protocol for receiving data from the internet, in this case the SpitCast API.
+Use the word <em>Fetch</em> for internet interactions.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SurfCaster20SpitCastDataDelegateP011fetchedTempE04data7request6county5erroryAA05WaterH6PacketCSg_AA0E7RequestCSSs5Error_pSgtF"></a>
+                    <a name="//apple_ref/swift/Method/fetchedTempData(data:request:county:error:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SurfCaster20SpitCastDataDelegateP011fetchedTempE04data7request6county5erroryAA05WaterH6PacketCSg_AA0E7RequestCSSs5Error_pSgtF">fetchedTempData(data:request:county:error:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchedTempData</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="kt"><a href="../Classes/WaterTempPacket.html">WaterTempPacket</a></span><span class="p">?,</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/DataRequest.html">DataRequest</a></span><span class="p">,</span> <span class="nv">county</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SurfCaster20SpitCastDataDelegateP011fetchedTideE07dataArr7request6county5errorySayAA0H6PacketCGSg_AA0E7RequestCSSs5Error_pSgtF"></a>
+                    <a name="//apple_ref/swift/Method/fetchedTideData(dataArr:request:county:error:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SurfCaster20SpitCastDataDelegateP011fetchedTideE07dataArr7request6county5errorySayAA0H6PacketCGSg_AA0E7RequestCSSs5Error_pSgtF">fetchedTideData(dataArr:request:county:error:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchedTideData</span><span class="p">(</span><span class="nv">dataArr</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/TidePacket.html">TidePacket</a></span><span class="p">]?,</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/DataRequest.html">DataRequest</a></span><span class="p">,</span> <span class="nv">county</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SurfCaster20SpitCastDataDelegateP012fetchedSwellE07dataArr7request6county5errorySayAA0H6PacketCGSg_AA0E7RequestCSSs5Error_pSgtF"></a>
+                    <a name="//apple_ref/swift/Method/fetchedSwellData(dataArr:request:county:error:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SurfCaster20SpitCastDataDelegateP012fetchedSwellE07dataArr7request6county5errorySayAA0H6PacketCGSg_AA0E7RequestCSSs5Error_pSgtF">fetchedSwellData(dataArr:request:county:error:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchedSwellData</span><span class="p">(</span><span class="nv">dataArr</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/SwellPacket.html">SwellPacket</a></span><span class="p">]?,</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/DataRequest.html">DataRequest</a></span><span class="p">,</span> <span class="nv">county</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SurfCaster20SpitCastDataDelegateP011fetchedWindE07dataArr7request6county5errorySayAA0H6PacketCGSg_AA0E7RequestCSSs5Error_pSgtF"></a>
+                    <a name="//apple_ref/swift/Method/fetchedWindData(dataArr:request:county:error:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SurfCaster20SpitCastDataDelegateP011fetchedWindE07dataArr7request6county5errorySayAA0H6PacketCGSg_AA0E7RequestCSSs5Error_pSgtF">fetchedWindData(dataArr:request:county:error:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchedWindData</span><span class="p">(</span><span class="nv">dataArr</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/WindPacket.html">WindPacket</a></span><span class="p">]?,</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/DataRequest.html">DataRequest</a></span><span class="p">,</span> <span class="nv">county</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10SurfCaster20SpitCastDataDelegateP15fetchedAllSpots7dataArr5errorySayAA10SpotPacketCGSg_s5Error_pSgtF"></a>
+                    <a name="//apple_ref/swift/Method/fetchedAllSpots(dataArr:error:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10SurfCaster20SpitCastDataDelegateP15fetchedAllSpots7dataArr5errorySayAA10SpotPacketCGSg_s5Error_pSgtF">fetchedAllSpots(dataArr:error:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchedAllSpots</span><span class="p">(</span><span class="nv">dataArr</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/SpotPacket.html">SpotPacket</a></span><span class="p">]?,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-01-09)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

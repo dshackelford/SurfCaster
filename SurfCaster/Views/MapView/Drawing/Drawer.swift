@@ -10,8 +10,13 @@ import Foundation
 import UIKit
 import CoreGraphics
 
+/**
+ Handles all `UIBezierPath` calls.
+ Mainly used by `Datum`'s.
+ */
 class Drawer : NSObject{
     
+    ///Draws a cropped circle, see `TideDatumPresenter`.
     func drawPartialCircle(toView view : UIView, forCenter point:CGPoint, andRadius radius:CGFloat, andAngle angle: Double, andColor color: UIColor) ->CAShapeLayer{
         
         let circlePath = UIBezierPath(arcCenter: point, radius: radius, startAngle: CGFloat(0), endAngle:CGFloat(angle), clockwise: true)
@@ -31,6 +36,7 @@ class Drawer : NSObject{
         return shapeLayer
     }
     
+    ///Draws a full circle for all `Datum`'s circle ring.
     func drawCircle(toView view : UIView, forCenter point:CGPoint, andRadius radius:CGFloat, andColor color: UIColor){
         
         let circlePath = UIBezierPath(arcCenter: point, radius: radius, startAngle: CGFloat(0), endAngle:CGFloat(Double.pi * 2), clockwise: true)
@@ -48,6 +54,7 @@ class Drawer : NSObject{
         view.layer.addSublayer(shapeLayer)
     }
     
+    ///Fills in a cropped circle for tide filling.
     func drawCircleInFill(toView view :UIView, forCenter point:CGPoint, forRadius radius: CGFloat, andColor color:UIColor, andStartAngle startAngle: Double) {
         
         let circlePath = UIBezierPath(arcCenter: point, radius: radius - 4, startAngle: CGFloat(-startAngle), endAngle:CGFloat(Double.pi+startAngle), clockwise: true)
@@ -65,6 +72,8 @@ class Drawer : NSObject{
         view.layer.addSublayer(shapeLayer)
     }
     
+    
+    ///`Datum`'s indicator triangle.
     func drawTriangle(toView view :UIView, forCenter point:CGPoint, forRadius radius: CGFloat, forLength length: CGFloat, andColor color:UIColor) {
         
         let path = UIBezierPath()

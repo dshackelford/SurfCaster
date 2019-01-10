@@ -11,6 +11,10 @@ import UIKit
 import CoreLocation
 import SwiftRangeSlider
 
+/**
+ `UITableView` holding the fields the surfer will fill out after a session.
+ These are the `Report`'s that will be sent up to the dshacktech.com/surfshackDB
+ */
 class ReportView : UITableView, UITableViewDelegate,UITableViewDataSource {
     
     var location : CLLocation?

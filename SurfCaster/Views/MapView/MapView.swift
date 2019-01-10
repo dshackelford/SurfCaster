@@ -9,8 +9,12 @@
 import Foundation
 import MapKit
 
-class MapView : MKMapView, MKMapViewDelegate, UIGestureRecognizerDelegate{
-    
+/**
+ `MKMapView` holding the surf data `Datum`'s.
+ Handles the users location and heading via `MKMapView` delegate methods.
+ 
+ */
+class MapView : MKMapView, MKMapViewDelegate, UIGestureRecognizerDelegate, LocationsDBDelegate{
     var vc : ViewController?
     var lastCenter : CLLocation?
     var currentHeading : Double = 0 //degreee
@@ -33,18 +37,8 @@ class MapView : MKMapView, MKMapViewDelegate, UIGestureRecognizerDelegate{
         
         self.delegate = self
         
-        let spotArr = LocationsDB().getAllSpots() //may not return values
-        for aSpot in spotArr
-        {
-            if(aSpot.lat != nil && aSpot.lon != nil)
-            {
-                let anno = MKPointAnnotation()
-                anno.coordinate = CLLocationCoordinate2DMake(aSpot.lat!, aSpot.lon!)
-                anno.title = aSpot.spotName
-                anno.subtitle = aSpot.county
-                self.addAnnotation(anno)
-            }
-        }
+        let locDB = LocationsDB(withDelegate: self)
+        locDB.getAllSpots()
         
         self.vc = vc
         
@@ -63,6 +57,7 @@ class MapView : MKMapView, MKMapViewDelegate, UIGestureRecognizerDelegate{
         self.addSubview(timeSlider!)
     }
     
+    ///Method for changing the time. Informs all `Datum`'s that the time has changed.
     @objc func sliderChangedValue(){
         print("slider value = " + String(timeSlider!.value))
         
@@ -73,6 +68,7 @@ class MapView : MKMapView, MKMapViewDelegate, UIGestureRecognizerDelegate{
         return true
     }
     
+    ///When the use rotates the map, they are changing the heading of the `Datum`'s
     @objc func handleRotation(recognizer:UIRotationGestureRecognizer){
         let recDeg = Double(recognizer.rotation)*180.0/Double.pi
         var offsetHeading = self.camera.heading - recDeg
@@ -97,7 +93,7 @@ class MapView : MKMapView, MKMapViewDelegate, UIGestureRecognizerDelegate{
         super.init(coder: aDecoder)
     }
     
-    //MARK - MKMapView Delegate Methods
+    //MARK: - MKMapView Delegate Methods
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         let newRegion = MKCoordinateRegion(center: userLocation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
        
@@ -128,5 +124,27 @@ class MapView : MKMapView, MKMapViewDelegate, UIGestureRecognizerDelegate{
         print("new did heading: " + String(mapView.camera.heading))
         currentHeading = mapView.camera.heading
         datumView!.headingChanged(heading:currentHeading)
+    }
+    
+    //MARK: - LocationsDBDelegate Methods
+    func foundAllSpots(spots: [SpotPacket]?) {
+        if(spots != nil)
+        {
+            for aSpot in spots!
+            {
+                if(aSpot.lat != nil && aSpot.lon != nil)
+                {
+                    let anno = MKPointAnnotation()
+                    anno.coordinate = CLLocationCoordinate2DMake(aSpot.lat!, aSpot.lon!)
+                    anno.title = aSpot.spotName
+                    anno.subtitle = aSpot.county
+                    self.addAnnotation(anno)
+                }
+            }
+        }
+    }
+    
+    func foundCountyName(name: String?, forLoc loc: CLLocation) {
+        
     }
 }

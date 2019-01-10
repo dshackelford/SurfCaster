@@ -10,6 +10,9 @@ import Foundation
 import CoreLocation
 import MapKit
 
+/**
+ Interface with the `CLLocationManager`. At this is **Obsolete**.
+ */
 class LocationManager : CLLocationManager, CLLocationManagerDelegate{
     
     override init() {

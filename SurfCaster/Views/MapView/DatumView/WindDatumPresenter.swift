@@ -9,6 +9,12 @@
 import Foundation
 import UIKit
 import CoreLocation
+
+/**
+ `Datum` for presenting Wind information.
+ Infor label is the current Air Temperature.
+ The indicator triangle will point in the direction of the wind, with the offset of the current map heading. 
+ */
 class WindDatumPresenter : UIView, DatumViewPresenter, DataManagerReceiver{
 
     var infoLabel : UILabel
@@ -37,19 +43,20 @@ class WindDatumPresenter : UIView, DatumViewPresenter, DataManagerReceiver{
 
     //Mark: - DatumViewPresenter Methods
     func rotateAccordingToAngle(angle: Double) {
+        print("WindDatumPresenter rotateAccordingToAngle angle: " + String(angle) + " with an offset: " + String(angleOffset))
         self.transform = CGAffineTransform(rotationAngle: CGFloat(-angle/180.0*Double.pi) + CGFloat(-angleOffset/180.0*Double.pi))
         infoLabel.transform = CGAffineTransform(rotationAngle: CGFloat(angle/180.0*Double.pi) + CGFloat(angleOffset/180.0*Double.pi))
     }
 
     func updateAccordingToLocation(loc: CLLocation) {
         let dataRequest = DataRequest(withDate: Date.init(timeIntervalSinceNow: 0), andLocation: loc, forReceiver: self)
-        dataManager.getWindForecast(withReqest: dataRequest)
+        dataManager.getWindForecast(withRequest: dataRequest)
     }
 
     func updateAccodringToTime(hour : Int) {
         print(String(hour))
         let futureRequest = DataRequest(withDate: Date.init(timeIntervalSinceNow: Double(hour)*60.0*60.0), andLocation: container.location, forReceiver: self)
-        dataManager.getWindForecast(withReqest: futureRequest)
+        dataManager.getWindForecast(withRequest: futureRequest)
     }
     
     func hide() {
@@ -77,30 +84,33 @@ class WindDatumPresenter : UIView, DatumViewPresenter, DataManagerReceiver{
                 if(packet.directionCompass != nil && packet.directionDegrees != nil && packet.hour != nil)
                 {
                    print("Wind direction: " + packet.directionCompass! + " and degrees: " + String(packet.directionDegrees!) + " at hour: " + packet.hour!)
+                    
                 }
             }
             
+            self.angleOffset = 360 - (arr![0].directionDegrees! - 90) - 180
+            print("WindDatumPresenter angleOffset = " + String(self.angleOffset))
+            
             DispatchQueue.main.async {
                 self.infoLabel.text = arr![0].directionCompass
-                self.angleOffset = arr![0].directionDegrees! + 180
+                self.rotateAccordingToAngle(angle: 0.0)
             }
         }
     }
     
-    func swellForecastReceived(withData arr: [WindPacket]?, fromRequest request: DataRequest, andError error: Error?) {
+    func swellForecastReceived(withData arr: [SwellPacket]?, fromRequest request: DataRequest, andError error: Error?) {
         
     }
     
-    func tideForecastReceived(withData arr: [WindPacket]?, fromRequest request: DataRequest, andError error: Error?) {
+    func tideForecastReceived(withData arr: [TidePacket]?, fromRequest request: DataRequest, andError error: Error?) {
         
     }
     
-    func tempForecastReceived(withData arr: [WindPacket]?, fromRequest request: DataRequest, andError error: Error?) {
+    func tempForecastReceived(withData arr: [WaterTempPacket]?, fromRequest request: DataRequest, andError error: Error?) {
         
     }
     
     func wait(fromRequest request: DataRequest) {
         
     }
-    
 }

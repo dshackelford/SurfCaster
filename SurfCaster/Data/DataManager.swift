@@ -10,71 +10,68 @@ import Foundation
 import CoreLocation
 import FMDB
 
+/**
+ Protocol for interacting with the DataManager.
+ See `DatumPresenters` for implementation.
+ */
 protocol DataManagerReceiver {
     func windForecastReceived(withData arr:[WindPacket]?, fromRequest request:DataRequest, andError error:Error?)
-    func swellForecastReceived(withData arr:[WindPacket]?, fromRequest request:DataRequest, andError error:Error?)
-    func tideForecastReceived(withData arr:[WindPacket]?, fromRequest request:DataRequest, andError error:Error?)
-    func tempForecastReceived(withData arr:[WindPacket]?, fromRequest request:DataRequest, andError error:Error?)
+    func swellForecastReceived(withData arr:[SwellPacket]?, fromRequest request:DataRequest, andError error:Error?)
+    func tideForecastReceived(withData arr:[TidePacket]?, fromRequest request:DataRequest, andError error:Error?)
+    func tempForecastReceived(withData arr:[WaterTempPacket]?, fromRequest request:DataRequest, andError error:Error?)
     func wait(fromRequest request:DataRequest)
 }
 
-class DataRequest{
+/*
+ Description holder for a request for some forecast data.
+ */
+class DataRequest : LocationsDBDelegate{
     var date : Date
     var loc : CLLocation
     var receiver : DataManagerReceiver
     var fetching : Bool
+    var countyName : String?
     
     init(withDate dateInit:Date, andLocation locInit:CLLocation, forReceiver receiverInit: DataManagerReceiver) {
         date = dateInit
         loc = locInit
         receiver = receiverInit
         fetching = false
+        let locDB = LocationsDB(withDelegate: self)
+        locDB.getCountyNameFromLoc(loc: loc)
+        //include a date range in here? maybe start and end date. if there is no end date, then only use the start date?
+    }
+    
+    func foundAllSpots(spots: [SpotPacket]?) {
+        
+    }
+    
+    func foundCountyName(name: String?, forLoc loc: CLLocation) {
+        countyName = name
     }
 }
 
-class DataManager : NSObject, SpitCastDataDelegate{
+/*
+ The "Middle-Man" between the Datum presenters and the information sources of the internet fetcher `SpitCastData` and local storage `ForecastDB`.
+ This manager handles all the logic for determining where the data comes from. 
+ */
+class DataManager : NSObject, SpitCastDataDelegate, LocationsDBDelegate, ForecastDBDelegate{
     
-    var locDB : LocationsDB
-    var forecastDB : ForecastDB
+    var locDB : LocationsDB!
+    var forecastDB : ForecastDB!
     var requests : [DataRequest]
     
     override init() {
-        locDB = LocationsDB()
-        forecastDB = ForecastDB()
         requests = Array<DataRequest>()
         super.init()
-
-        if(locDB.getAllSpots().count == 0)
-        {
-            let spitData = SpitCastData(delegateInit: self)
-            spitData.fetchAllSpots()
-        }
+        locDB = LocationsDB(withDelegate: self)
+        forecastDB = ForecastDB(withDelegate: self)
+        locDB.getAllSpots()
     }
     
-    func getWindForecast(withReqest request:DataRequest){
-        
-        let countyName = locDB.getCountyNameFromLoc(loc: request.loc)
-        
+    func getWindForecast(withRequest request:DataRequest){
         //check local database for return
-        let windPacket = forecastDB.getWindForecast(forDate: request.date)
-        if(windPacket != nil)
-        {
-            request.receiver.windForecastReceived(withData: windPacket!, fromRequest: request, andError: nil)
-        }
-        else //if not, grab some from online
-        {
-            let spitData = SpitCastData(delegateInit: self)
-            if(countyName != nil)
-            {
-                spitData.fetchWindData(forCounty:countyName!, withRequest:request)
-            }
-            else
-            {
-                spitData.fetchAllSpots() //get all spots from the internet and update the local database
-                
-                print("DataManager: Error getting a countyName from a location")
-            }
-        }
+        forecastDB.getWindForecast(forRequest: request)
     }
     
     func getSwellForecast(forLocation loc : CLLocation, andDate date:NSDate){
@@ -86,24 +83,32 @@ class DataManager : NSObject, SpitCastDataDelegate{
     func getAirTempForecast(forLocation loc : CLLocation, andDate date:NSDate){
     }
     
-    func getTideForecast(forLocation loc : CLLocation, andDate date:NSDate){
+    func getTideForecast(withRequest request:DataRequest) {
+        forecastDB.getTideForecast(forRequest: request)
     }
 
     
     //MARK: - SpitCastData Delegate Methods
-    func foundTempData(data: WaterTempPacket?, request: DataRequest, county: String, error: Error?) {
+    func fetchedTempData(data: WaterTempPacket?, request: DataRequest, county: String, error: Error?) {
         
     }
     
-    func foundTideData(dataArr: [TidePacket]?, request: DataRequest, county: String, error: Error?) {
+    func fetchedTideData(dataArr: [TidePacket]?, request: DataRequest, county: String, error: Error?) {
+        //add it to the forecast database for later re-use
+        if(error == nil && dataArr!.count > 0)
+        {
+            forecastDB.updateTideTable(withArr: dataArr!)
+        }
+        
+        //pass it onto the receiver, probably a datum presenter
+        request.receiver.tideForecastReceived(withData: dataArr, fromRequest: request, andError: error)
+    }
+    
+    func fetchedSwellData(dataArr: [SwellPacket]?, request: DataRequest, county: String, error: Error?) {
         
     }
     
-    func foundSwellData(dataArr: [SwellPacket]?, request: DataRequest, county: String, error: Error?) {
-        
-    }
-    
-    func foundWindData(dataArr: [WindPacket]?, request: DataRequest, county: String, error: Error?) {
+    func fetchedWindData(dataArr: [WindPacket]?, request: DataRequest, county: String, error: Error?) {
         //add it tot the forecast database!
         if(error == nil && dataArr!.count > 0)
         {
@@ -113,7 +118,7 @@ class DataManager : NSObject, SpitCastDataDelegate{
         request.receiver.windForecastReceived(withData: dataArr, fromRequest: request,andError: error)
     }
 
-    func foundAllSpots(dataArr: [SpotPacket]?, error: Error?) {
+    func fetchedAllSpots(dataArr: [SpotPacket]?, error: Error?) {
         if(error == nil && dataArr != nil)
         {
             locDB.update(withAllSpots: dataArr!)
@@ -121,6 +126,64 @@ class DataManager : NSObject, SpitCastDataDelegate{
         else
         {
             print(error!.localizedDescription)
+        }
+    }
+    
+    //MARK: - LocationDB Delegate
+    func foundCountyName(name:String?, forLoc loc:CLLocation){
+        
+    }
+    
+    func foundAllSpots(spots:[SpotPacket]?){
+        if(spots != nil && spots!.count == 0)
+        {
+            let spitData = SpitCastData(delegateInit: self)
+            spitData.fetchAllSpots()
+        }
+        else
+        {
+            print("Alert use that there is no spot data")
+        }
+    }
+    
+    //MARK: - ForecastDB Delegate
+    func foundWindForecast(data:[WindPacket]?, error:Error?, request:DataRequest) {
+        if(data != nil)
+        {
+            request.receiver.windForecastReceived(withData: data!, fromRequest: request, andError: nil)
+        }
+        else //if not, grab some from online
+        {
+            let spitData = SpitCastData(delegateInit: self)
+            if(request.countyName != nil)
+            {
+                spitData.fetchWindData(forCounty:request.countyName!, withRequest:request)
+            }
+            else
+            {
+                spitData.fetchAllSpots() //get all spots from the internet and update the local database
+                
+                print("DataManager: Error getting a countyName from a location")
+            }
+        }
+    }
+    
+    func foundTideForecast(data:[TidePacket]?, error:Error?, request:DataRequest) {
+        if(data != nil)
+        {
+            request.receiver.tideForecastReceived(withData: data, fromRequest: request, andError: nil)
+        }
+        else
+        {
+            let spitData = SpitCastData(delegateInit: self)
+            if(request.countyName != nil)
+            {
+                spitData.fetchTideData(forCounty: request.countyName!, withRequest: request)
+            }
+            else
+            {
+                spitData.fetchAllSpots()
+            }
         }
     }
 }
