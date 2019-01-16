@@ -15,7 +15,7 @@ import CoreLocation
  Infor label is the current Air Temperature.
  The indicator triangle will point in the direction of the wind, with the offset of the current map heading. 
  */
-class WindDatumPresenter : UIView, DatumViewPresenter, DataManagerReceiver{
+class WindDatumPresenter : UIView, DatumViewPresenter, DataManagerReceiver, DataRequestCreator{
 
     var infoLabel : UILabel
     var angleOffset : Double
@@ -49,14 +49,16 @@ class WindDatumPresenter : UIView, DatumViewPresenter, DataManagerReceiver{
     }
 
     func updateAccordingToLocation(loc: CLLocation) {
-        let dataRequest = DataRequest(withDate: Date.init(timeIntervalSinceNow: 0), andLocation: loc, forReceiver: self)
-        dataManager.getWindForecast(withRequest: dataRequest)
+       _ = DataRequest(withDate: Date.init(timeIntervalSinceNow: 0), andLocation: loc, forReceiver: self, andCreator:self)
+    }
+    
+    func requestCreated(request: DataRequest) {
+        dataManager.getWindForecast(withRequest: request)
     }
 
     func updateAccodringToTime(hour : Int) {
         print(String(hour))
-        let futureRequest = DataRequest(withDate: Date.init(timeIntervalSinceNow: Double(hour)*60.0*60.0), andLocation: container.location, forReceiver: self)
-        dataManager.getWindForecast(withRequest: futureRequest)
+        _ = DataRequest(withDate: Date.init(timeIntervalSinceNow: Double(hour)*60.0*60.0), andLocation: container.location, forReceiver: self, andCreator:self)
     }
     
     func hide() {

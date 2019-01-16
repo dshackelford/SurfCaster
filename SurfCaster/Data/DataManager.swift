@@ -22,6 +22,9 @@ protocol DataManagerReceiver {
     func wait(fromRequest request:DataRequest)
 }
 
+protocol DataRequestCreator {
+    func requestCreated(request:DataRequest)
+}
 /*
  Description holder for a request for some forecast data.
  */
@@ -31,8 +34,10 @@ class DataRequest : LocationsDBDelegate{
     var receiver : DataManagerReceiver
     var fetching : Bool
     var countyName : String?
+    var creator : DataRequestCreator
     
-    init(withDate dateInit:Date, andLocation locInit:CLLocation, forReceiver receiverInit: DataManagerReceiver) {
+    init(withDate dateInit:Date, andLocation locInit:CLLocation, forReceiver receiverInit: DataManagerReceiver, andCreator creatorInit:DataRequestCreator ) {
+        creator = creatorInit
         date = dateInit
         loc = locInit
         receiver = receiverInit
@@ -48,6 +53,7 @@ class DataRequest : LocationsDBDelegate{
     
     func foundCountyName(name: String?, forLoc loc: CLLocation) {
         countyName = name
+        creator.requestCreated(request: self)
     }
 }
 
@@ -74,7 +80,8 @@ class DataManager : NSObject, SpitCastDataDelegate, LocationsDBDelegate, Forecas
         forecastDB.getWindForecast(forRequest: request)
     }
     
-    func getSwellForecast(forLocation loc : CLLocation, andDate date:NSDate){
+    func getSwellForecast(withRequest request:DataRequest){
+        forecastDB.getSwellForecast(forRequest: request)
     }
     
     func getWaterTempForecast(forLocation loc : CLLocation, andDate date:NSDate){
@@ -105,7 +112,12 @@ class DataManager : NSObject, SpitCastDataDelegate, LocationsDBDelegate, Forecas
     }
     
     func fetchedSwellData(dataArr: [SwellPacket]?, request: DataRequest, county: String, error: Error?) {
+        if(error == nil && dataArr!.count > 0)
+        {
+            forecastDB.updateSwellTable(withArr: dataArr!)
+        }
         
+        request.receiver.swellForecastReceived(withData: dataArr, fromRequest: request, andError: error)
     }
     
     func fetchedWindData(dataArr: [WindPacket]?, request: DataRequest, county: String, error: Error?) {
@@ -179,6 +191,25 @@ class DataManager : NSObject, SpitCastDataDelegate, LocationsDBDelegate, Forecas
             if(request.countyName != nil)
             {
                 spitData.fetchTideData(forCounty: request.countyName!, withRequest: request)
+            }
+            else
+            {
+                spitData.fetchAllSpots()
+            }
+        }
+    }
+    
+    func foundSwellForecast(data: [SwellPacket]?, error: Error?, request: DataRequest) {
+        if(data != nil)
+        {
+            request.receiver.swellForecastReceived(withData: data, fromRequest: request, andError: nil)
+        }
+        else
+        {
+            let spitData = SpitCastData(delegateInit: self)
+            if(request.countyName != nil)
+            {
+                spitData.fetchSwellData(forCounty: request.countyName!, withRequest: request)
             }
             else
             {

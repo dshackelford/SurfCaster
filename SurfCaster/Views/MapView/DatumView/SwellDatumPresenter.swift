@@ -16,13 +16,14 @@ import CoreLocation
  Rings oscillating inside the circle ring indicate the period of the swell.
  Indicator triangles (as many as swells for the current hour) will scale relative to weight of swell.
  */
-class SwellDatumPresenter : UIView, DatumViewPresenter{
+class SwellDatumPresenter : UIView, DatumViewPresenter, DataManagerReceiver, DataRequestCreator{
     
     var infoLabel : UILabel
     var periodCircle : CAShapeLayer?
     var periodAngle : Double
     var periodView : UIView
     var container : DatumViewContainer
+    var dataManager : DataManager
     
     init(frame: CGRect, andContainer containerInit:DatumViewContainer) {
         periodAngle = 0
@@ -30,10 +31,10 @@ class SwellDatumPresenter : UIView, DatumViewPresenter{
         infoLabel = UILabel(frame: frame)
         
         container = containerInit
-        
+        dataManager = DataManager()
         super.init(frame:frame)
         self.addSubview(periodView)
-        
+
         infoLabel.text = "68°"
         infoLabel.textAlignment = NSTextAlignment.center
         infoLabel.font = UIFont.boldSystemFont(ofSize: 80)
@@ -58,7 +59,12 @@ class SwellDatumPresenter : UIView, DatumViewPresenter{
     }
     
     func updateAccodringToTime(hour : Int) {
-        //ask data manager for new data?
+        print(String(hour))
+        _ = DataRequest(withDate: Date.init(timeIntervalSinceNow: Double(hour)*60.0*60.0), andLocation: container.location, forReceiver: self, andCreator: self)
+    }
+    
+    func requestCreated(request: DataRequest) {
+        dataManager.getSwellForecast(withRequest: request)
     }
     
     func hide() {

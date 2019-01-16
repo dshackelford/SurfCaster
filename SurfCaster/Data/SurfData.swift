@@ -139,16 +139,18 @@ public class WaterTempPacket : Decodable{
 
 ///Data packet implementation for Swell information.
 public class SwellPacket : Decodable{
-    var subSwell1 : SubSwellPacket?
-    var subSwell2 : SubSwellPacket?
-    var subSwell3 : SubSwellPacket?
-    var subSwell4 : SubSwellPacket?
-    var date : String?
+    var subSwells : [SubSwellPacket]
+//    var subSwell1 : SubSwellPacket?
+//    var subSwell2 : SubSwellPacket?
+//    var subSwell3 : SubSwellPacket?
+//    var subSwell4 : SubSwellPacket?
+    var dateStr : String?
     var day : String?
     var gmt : String?
     var hour : String?
     var hst : Double?
     var name : String?
+    var uuid : String?
     
     enum CodingKeys : String, CodingKey{
         case subSwell1 = "0"
@@ -165,18 +167,42 @@ public class SwellPacket : Decodable{
     
     required public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.subSwell1 = try container.decode(SubSwellPacket.self, forKey: .subSwell1)
-        self.subSwell2 = try container.decode(SubSwellPacket.self, forKey: .subSwell2)
-        self.subSwell3 = try container.decode(SubSwellPacket.self, forKey: .subSwell3)
-        self.subSwell4 = try container.decode(SubSwellPacket.self, forKey: .subSwell4)
-        self.date = try container.decode(String.self, forKey: .date)
+        let subSwell1 = try container.decode(SubSwellPacket?.self, forKey: .subSwell1)
+        let subSwell2 = try container.decode(SubSwellPacket?.self, forKey: .subSwell2)
+        let subSwell3 = try container.decode(SubSwellPacket?.self, forKey: .subSwell3)
+        let subSwell4 = try container.decode(SubSwellPacket?.self, forKey: .subSwell4)
+        self.subSwells = Array<SubSwellPacket>()
+        if(subSwell1 != nil)
+        {
+            self.subSwells.append(subSwell1!)
+        }
+        
+        if(subSwell2 != nil)
+        {
+            self.subSwells.append(subSwell2!)
+        }
+        
+        if(subSwell3 != nil)
+        {
+            self.subSwells.append(subSwell3!)
+        }
+        
+        if(subSwell4 != nil)
+        {
+            self.subSwells.append(subSwell4!)
+        }
+        self.dateStr = try container.decode(String.self, forKey: .date)
         self.day = try container.decode(String.self, forKey: .day)
-        self.date = try container.decode(String.self, forKey: .date)
         self.gmt = try container.decode(String.self, forKey: .gmt)
         self.hour = try container.decode(String.self, forKey: .hour)
         self.hst = try container.decode(Double.self, forKey: .hst)
         self.name = try container.decode(String.self, forKey: .name)
+        self.uuid = UUID().uuidString
     }
+    
+//    public init(withResult result:FMResultSet){
+//        
+//    }
     
 }
 

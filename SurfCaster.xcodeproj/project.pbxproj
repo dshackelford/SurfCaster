@@ -54,6 +54,7 @@
 		69E4A62A21A9D369009A9D63 /* SpitCastDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E4A62921A9D369009A9D63 /* SpitCastDataTests.swift */; };
 		69E77C5921E0964A00ABD101 /* Notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 69E77C5821E0964A00ABD101 /* Notes.txt */; };
 		69E77C5B21E731E600ABD101 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 69E77C5A21E731E500ABD101 /* README.md */; };
+		69E77C5E21E735EE00ABD101 /* icon1024_1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69E77C5D21E735EE00ABD101 /* icon1024_1x.png */; };
 		B6AF124604237699237D0632 /* Pods_SurfCasterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0FE95D67912DFB694E4374 /* Pods_SurfCasterTests.framework */; };
 		F4216D84655E25B7E683D69F /* Pods_SurfCasterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ECB37342C3B309659307E57 /* Pods_SurfCasterUITests.framework */; };
 /* End PBXBuildFile section */
@@ -126,6 +127,7 @@
 		69E4A62921A9D369009A9D63 /* SpitCastDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpitCastDataTests.swift; sourceTree = "<group>"; };
 		69E77C5821E0964A00ABD101 /* Notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
 		69E77C5A21E731E500ABD101 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		69E77C5D21E735EE00ABD101 /* icon1024_1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1024_1x.png; sourceTree = "<group>"; };
 		6ECB37342C3B309659307E57 /* Pods_SurfCasterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SurfCasterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D2D9CF58D5086987F0ECDED /* Pods-SurfCaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurfCaster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SurfCaster/Pods-SurfCaster.debug.xcconfig"; sourceTree = "<group>"; };
 		9D71BEA7699B6D30E3BCE84D /* Pods-SurfCasterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurfCasterUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SurfCasterUITests/Pods-SurfCasterUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		696D5B6921BCA5D800959CCC /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				69E77C5C21E735D500ABD101 /* Icon */,
 				696D5B8021C5FE2D00959CCC /* pixelmators */,
 				696D5B7F21C5FE2400959CCC /* pngs */,
 			);
@@ -335,6 +338,14 @@
 				696D5B7D21C5FD5000959CCC /* RatingCell.xib */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		69E77C5C21E735D500ABD101 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				69E77C5D21E735EE00ABD101 /* icon1024_1x.png */,
+			);
+			path = Icon;
 			sourceTree = "<group>";
 		};
 		76E69F7690602B738A6EF93E /* Frameworks */ = {
@@ -483,6 +494,7 @@
 				697983F4219C01B8004814DC /* Assets.xcassets in Resources */,
 				696D5B8521C5FEE600959CCC /* StarUnhighlighted.png in Resources */,
 				696D5B7E21C5FD5000959CCC /* RatingCell.xib in Resources */,
+				69E77C5E21E735EE00ABD101 /* icon1024_1x.png in Resources */,
 				697983F2219C01B7004814DC /* Main.storyboard in Resources */,
 				696D5B8221C5FEDA00959CCC /* Star.pxm in Resources */,
 				69E77C5B21E731E600ABD101 /* README.md in Resources */,
@@ -796,11 +808,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5C7WP8NCS7;
 				INFOPLIST_FILE = SurfCaster/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dshacktech.SurfCaster;
+				PRODUCT_BUNDLE_IDENTIFIER = DshackTech.SurfShackMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -815,11 +828,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5C7WP8NCS7;
 				INFOPLIST_FILE = SurfCaster/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dshacktech.SurfCaster;
+				PRODUCT_BUNDLE_IDENTIFIER = DshackTech.SurfShackMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

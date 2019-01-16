@@ -15,7 +15,7 @@ import CoreLocation
  Holds math for caculating the partial circle and showing the direction of the indicator triangle.
  Indicator triangle will only be point up or down, for the tide coming in or out. 
  */
-class TideDatumPresenter: UIView , DatumViewPresenter, DataManagerReceiver {
+class TideDatumPresenter: UIView , DatumViewPresenter, DataManagerReceiver, DataRequestCreator {
     var container : DatumViewContainer
     var dataManager : DataManager
     var maxTide : Double
@@ -49,8 +49,11 @@ class TideDatumPresenter: UIView , DatumViewPresenter, DataManagerReceiver {
     
     func updateAccodringToTime(hour : Int) {
         print(String(hour))
-        let futureRequest = DataRequest(withDate: Date.init(timeIntervalSinceNow: Double(hour)*60.0*60.0), andLocation: container.location, forReceiver: self)
-        dataManager.getTideForecast(withRequest: futureRequest)
+        _ = DataRequest(withDate: Date.init(timeIntervalSinceNow: Double(hour)*60.0*60.0), andLocation: container.location, forReceiver: self, andCreator:self)
+    }
+    
+    func requestCreated(request: DataRequest) {
+        dataManager.getTideForecast(withRequest: request)
     }
     
     func hide() {

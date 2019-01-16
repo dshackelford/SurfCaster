@@ -1,5 +1,5 @@
 # Surf_Shack
-by [DshackTech](www.dshacktech.com/surfshack)
+by [DshackTech](http://dshacktech.com/surfShack.htm)
 
 ## What is SurfShack?
 > Surf_Shack aims to proved the user with a unique experience interacting with common surf data categories. 

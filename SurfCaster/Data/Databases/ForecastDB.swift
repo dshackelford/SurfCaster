@@ -17,6 +17,7 @@ import CoreLocation
 protocol ForecastDBDelegate {
     func foundWindForecast(data:[WindPacket]?, error:Error?, request:DataRequest)
     func foundTideForecast(data:[TidePacket]?, error:Error?, request:DataRequest)
+    func foundSwellForecast(data:[SwellPacket]?, error:Error?, request:DataRequest)
 }
 
 /**
@@ -55,6 +56,10 @@ class ForecastDB : LocationsDBDelegate {
                     do{
                         try self.db.executeUpdate("CREATE TABLE IF NOT EXISTS windForecasts (county String, date String, day String, gmtStr String, hour String, WindDirectionDegrees Double, WindDirectionCompass String, WindMagnitudeMPH Double, WindMagnitudeKTS Double)", values: nil)
                         try self.db.executeUpdate("CREATE TABLE IF NOT EXISTS tideForecasts (county String, date String, day String, gmtStr String, hour String, TideMagnitudeMeters Double, TideMagnitudeFeet Double)", values: nil)
+                        try self.db.executeUpdate("CREATE TABLE IF NOT EXISTS swellForecasts (county String, date String, day String, gmtStr String, hour String, hst double, uuid String)", values: nil)
+                        try self.db.executeUpdate("CREATE TABLE IF NOT EXISTS subSwellForecasts (swellUUID String, subSwellIndex Integer, dir Double, hs Double, tp Double)", values: nil)
+                        
+                        
                         self.db.close()
                     }
                     catch
@@ -68,39 +73,51 @@ class ForecastDB : LocationsDBDelegate {
     }
     
     func getWindForecast(forRequest request:DataRequest){
-        print("Requesting wind forecast from databse.")
-        //check if data for data exists
-        var arr = Array<WindPacket>()
-        if(db.open())
-        {
-            do{
-                let query = "SELECT * FROM windForecasts WHERE gmtStr = '" + findSpitDateFromDate(date: request.date) + "'"
-                print(query)
-                let set = try db.executeQuery(query, values: nil)
+        DispatchQueue.main.async {
+            print("Requesting wind forecast from databse.")
+            //check if data for data exists
+            var arr = Array<WindPacket>()
+            if(self.db.open())
+            {
+                do{
+                    let query = "SELECT * FROM windForecasts WHERE gmtStr = '" + self.findSpitDateFromDate(date: request.date) + "'"
+                    print(query)
+                    let set = try self.db.executeQuery(query, values: nil)
 
-                while set.next()
-                {
-                    arr.append(WindPacket(withResult: set))
+                    while set.next()
+                    {
+                        arr.append(WindPacket(withResult: set))
+                    }
+                }catch{
+                    self.db.close()
+                    print(error)
                 }
-            }catch{
-                db.close()
-                print(error)
             }
-        }
-        db.close()
-        if(arr.count > 0)
-        {
-            self.delegate.foundWindForecast(data: arr, error: nil, request: request)
-        }
-        else
-        {
-            //add an error framework for this work to max effecientcy
-            return self.delegate.foundWindForecast(data: nil, error: nil, request: request);
+            self.db.close()
+            if(arr.count > 0)
+            {
+                self.delegate.foundWindForecast(data: arr, error: nil, request: request)
+            }
+            else
+            {
+                //add an error framework for this work to max effecientcy
+                self.delegate.foundWindForecast(data: nil, error: nil, request: request);
+            }
         }
     }
     
-    func getSwellForecast(forRequest request:DataRequest) -> [SwellPacket]?{
-        return nil
+    func getSwellForecast(forRequest request:DataRequest){
+        DispatchQueue.main.async {
+            var arr = Array<SwellPacket>()
+            if(self.db.open())
+            {
+                do{
+    //                let query = "SELECT * FROM swellForecasts WHERE gmt
+                }
+            }
+            
+            self.delegate.foundSwellForecast(data: nil, error: nil, request: request)
+        }
     }
     
     func getTideForecast(forRequest request:DataRequest){
@@ -139,58 +156,96 @@ class ForecastDB : LocationsDBDelegate {
     
     //MARK: - update tables
     func updateTempTable(withArr dataArr:[WaterTempPacket]){
-//        for packet in dataArr
-//        {
-//            if(db.open())
-//            {
-//                db.executeUpdate("INSERT INTO forecasts", values: <#T##[Any]?#>)
-//            }
-//        }
+//        DispatchQueue.main.async {
+    //        for packet in dataArr
+    //        {
+    //            if(db.open())
+    //            {
+    //                db.executeUpdate("INSERT INTO forecasts", values: <#T##[Any]?#>)
+    //            }
+    //        }
+//    }
     }
     
     func updateWindTable(withArr dataArr:[WindPacket])
     {
-        let locDB = LocationsDB(withDelegate: self)
-        if(db.open())
-        {
-            for packet in dataArr
+        DispatchQueue.main.async {
+            let locDB = LocationsDB(withDelegate: self)
+            if(self.db.open())
             {
-                if(packet.name != nil)
+                for packet in dataArr
                 {
-                    let countyName = locDB.convert(PrettyCountyName: packet.name!)
-                    do{
-                        try db.executeUpdate("INSERT INTO windForecasts (county, date, day, hour, gmtStr, WindDirectionDegrees, WindDirectionCompass, WindMagnitudeMPH, WindMagnitudeKTS) VALUES (?,?,?,?,?,?,?,?,?)", values: [countyName, packet.dateStr!, packet.day! ,packet.hour!, packet.gmt!, packet.directionDegrees!, packet.directionCompass!, packet.speedMPH!, packet.speedKTS!])
-                    }
-                    catch{
-                        db.close()
-                        print(error)
+                    if(packet.name != nil)
+                    {
+                        let countyName = locDB.convert(PrettyCountyName: packet.name!)
+                        do{
+                            try self.db.executeUpdate("INSERT INTO windForecasts (county, date, day, hour, gmtStr, WindDirectionDegrees, WindDirectionCompass, WindMagnitudeMPH, WindMagnitudeKTS) VALUES (?,?,?,?,?,?,?,?,?)", values: [countyName, packet.dateStr!, packet.day! ,packet.hour!, packet.gmt!, packet.directionDegrees!, packet.directionCompass!, packet.speedMPH!, packet.speedKTS!])
+                        }
+                        catch{
+                            self.db.close()
+                            print(error)
+                        }
                     }
                 }
             }
+            self.db.close()
         }
-        db.close()
     }
     
     func updateTideTable(withArr dataArr:[TidePacket]){
-        let locDB = LocationsDB(withDelegate: self)
-        if(db.open())
-        {
-            for packet in dataArr
+        DispatchQueue.main.async {
+            let locDB = LocationsDB(withDelegate: self)
+            if(self.db.open())
             {
-                if(packet.name != nil)
+                for packet in dataArr
                 {
-                    let countyNAme = locDB.convert(PrettyCountyName: packet.name!)
-                    do{
-                        try db.executeUpdate("INSERT INTO tideForecasts (county, date, day, hour, gmtStr, TideMagnitudeFeet, TideMagnitudeMeters) VALUES (?,?,?,?,?,?,?)", values: [countyNAme, packet.dateStr!, packet.day!, packet.hour!, packet.gmt!, packet.tideFt!, packet.tideM!])
-                    }
-                    catch{
-                        db.close()
-                        print(error)
+                    if(packet.name != nil)
+                    {
+                        let countyNAme = locDB.convert(PrettyCountyName: packet.name!)
+                        do{
+                            try self.db.executeUpdate("INSERT INTO tideForecasts (county, date, day, hour, gmtStr, TideMagnitudeFeet, TideMagnitudeMeters) VALUES (?,?,?,?,?,?,?)", values: [countyNAme, packet.dateStr!, packet.day!, packet.hour!, packet.gmt!, packet.tideFt!, packet.tideM!])
+                        }
+                        catch{
+                            self.db.close()
+                            print(error)
+                        }
                     }
                 }
             }
+            self.db.close()
         }
-        db.close()
+    }
+    
+    func updateSwellTable(withArr dataArr:[SwellPacket]){
+        DispatchQueue.main.async {
+            let locDB = LocationsDB(withDelegate: self)
+            if(self.db.open())
+            {
+                for packet in dataArr
+                {
+                    if(packet.name != nil)
+                    {
+                        let countyNAme = locDB.convert(PrettyCountyName: packet.name!)
+                        do{
+                            try self.db.executeUpdate("INSERT INTO swellForecasts (county, date, day, hour, gmtStr, hst, uuid) VALUES (?,?,?,?,?,?,?)", values: [countyNAme, packet.dateStr!, packet.day!, packet.hour!, packet.gmt!, packet.hst!, packet.uuid!])
+                            
+                            var i : Int = 0
+                            for subSwell in packet.subSwells
+                            {
+                                try self.db.executeUpdate("INSERT INTO subSwellForecasts (swellUUID, subSwellIndex, dir, hs, tp) VALUES (?,?,?,?,?)", values: [packet.uuid!,i,subSwell.dir!, subSwell.hs!,subSwell.tp!])
+                                i = i + 1
+                            }
+
+                        }
+                        catch{
+                            self.db.close()
+                            print(error)
+                        }
+                    }
+                }
+            }
+            self.db.close()
+        }
     }
     
     func findTimeGMTTimeInterval(From GMTString : String)->TimeInterval{
